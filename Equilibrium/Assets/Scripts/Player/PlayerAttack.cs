@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
     //assorbe luce da una sorgente
     private void AbsorbLight()
     {
-        if (Input.GetButtonDown("Fire2")) //se premo il tasto destro
+        if (Input.GetButtonDown("AbsorbLight")) //se premo il tasto destro
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
     //spara un proiettile di luce
     private void ShootLight ()
     {
-        if (Input.GetButtonDown("Fire1") && light > 0) //se premo il tasto sinistro e ho munizioni di luce
+        if (Input.GetButtonDown("ShootLight") && light > 0) //se premo il tasto sinistro e ho munizioni di luce
         {
             --light;
             GameObject bullet = Instantiate(lightBulletPrefab);

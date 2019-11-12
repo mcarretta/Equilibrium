@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
   m_Layer: 8
-  m_Name: FPSController
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,6 +76,8 @@ MonoBehaviour:
   m_MouseLook:
     XSensitivity: 2
     YSensitivity: 2
+    XPS4Sensitivity: 40
+    YPS4Sensitivity: 40
     clampVerticalRotation: 1
     MinimumX: -90
     MaximumX: 90

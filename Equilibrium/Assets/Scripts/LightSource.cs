@@ -6,6 +6,12 @@ public class LightSource : MonoBehaviour
 {
     [SerializeField] private bool lit = true; //se c'è luce
     [SerializeField] private Light lightPrefab;
+    private Material material;
+
+    private void Start()
+    {
+        material = GetComponent<Renderer>().material;
+    }
 
     public bool isLit()
     {
@@ -17,7 +23,8 @@ public class LightSource : MonoBehaviour
         if (lit)
         {
             lit = false;
-            lightPrefab.enabled = false;
+            lightPrefab.enabled = false; //disabilita la luce
+            material.DisableKeyword("_EMISSION"); //disabilita il bagliore del materiale (non dipende dal prefab luce sull'oggetto)
         }
     }
 
@@ -26,7 +33,8 @@ public class LightSource : MonoBehaviour
         if(!lit)
         {
             lit = true;
-            lightPrefab.enabled = true;
+            lightPrefab.enabled = true; //abilita la luce
+            material.EnableKeyword("_EMISSION"); //abilita il bagliore del materiale
         }
     }
 }
