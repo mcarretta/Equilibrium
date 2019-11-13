@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ead5a61742d61944a4bda8e54a01e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lit: 1
+  intensity: 2
+  maxIntensity: 2
   lightPrefab: {fileID: 255806499244426238}
 --- !u!1 &5292716243912771543
 GameObject:

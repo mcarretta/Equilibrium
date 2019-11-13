@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         AbsorbLight();
+        PutLight();
         ShootLight();
     }
 
@@ -31,19 +32,33 @@ public class PlayerAttack : MonoBehaviour
             if (Physics.Raycast(ray, out hit, absorbRange))  //raycast dal centro dello schermo fino a distanza absorbRange
             {
                 LightSource ls = hit.collider.gameObject.GetComponent<LightSource>();
-                if (ls != null && ls.isLit()) //se è una sorgente di luce ed è accesa, prendo munizioni
+                if (ls != null && ls.getIntensity() > 0) //se è una sorgente di luce ed è accesa, prendo munizioni
                 {
                     print("light absorbed");
                     ls.takeLight();
                     ++light;
                 }
-                else if(ls != null && !ls.isLit() && light > 0) //se la sorgente di luce è spenta e ho munizioni
+            }                    
+        }
+    }
+
+    //rimette la luce in una sorgente
+    private void PutLight()
+    {
+        if (Input.GetButtonDown("PutLight") && light > 0) //se premo la E
+        {
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, absorbRange))  //raycast dal centro dello schermo fino a distanza absorbRange
+            {
+                LightSource ls = hit.collider.gameObject.GetComponent<LightSource>();
+                if (ls != null && ls.getIntensity() < ls.getMaxIntensity()) //se è una sorgente di luce e non è piena di lue
                 {
                     print("light released");
                     ls.putLight();
                     --light;
                 }
-            }                    
+            }
         }
     }
 

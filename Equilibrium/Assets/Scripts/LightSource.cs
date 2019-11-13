@@ -4,37 +4,68 @@ using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
-    [SerializeField] private bool lit = true; //se c'è luce
-    [SerializeField] private Light lightPrefab;
-    private Material material;
+    [SerializeField] private int intensity = 2; //intensità della luce attuale
+    [SerializeField] private int maxIntensity = 2; //massima intensità raggiungibile
+    [SerializeField] private Light lightPrefab; //luce figlia dell'oggetto sorgente di luce
+    private Material material; //materiale emissivo
+    //costanti usate per calcolare l'emissione del materiale
+    private const float off = 0f;
+    private const float dim = 0.3f;
+    private const float bright = 1f;
 
     private void Start()
     {
         material = GetComponent<Renderer>().material;
+        lightPrefab.intensity = intensity;
+        calcEmission();
     }
 
-    public bool isLit()
+    public int getIntensity()
     {
-        return lit;
+        return intensity;
+    }
+
+    public int getMaxIntensity()
+    {
+        return maxIntensity;
     }
 
     public void takeLight()
     {
-        if (lit)
+        if (intensity > 0)
         {
-            lit = false;
-            lightPrefab.enabled = false; //disabilita la luce
-            material.DisableKeyword("_EMISSION"); //disabilita il bagliore del materiale (non dipende dal prefab luce sull'oggetto)
+            intensity--;
+            lightPrefab.intensity = intensity;
+            calcEmission();
         }
+
+        if (intensity == 0)
+            lightPrefab.enabled = false; //se non c'è luce disabilito il prefab
     }
 
     public void putLight()
     {
-        if(!lit)
+        if (intensity < maxIntensity)
         {
-            lit = true;
-            lightPrefab.enabled = true; //abilita la luce
-            material.EnableKeyword("_EMISSION"); //abilita il bagliore del materiale
+            intensity++;
+            lightPrefab.intensity = intensity;
+            lightPrefab.enabled = true; //la luce poteva essere spenta
+            calcEmission();
         }
+    }
+
+    //imposta l'emissione del materiale in base al valore dell'intensità della luce
+    private void calcEmission()
+    {
+        Color baseColor = Color.white;
+        float emission = 0;
+        if (intensity == 0)
+            emission = off;
+        else if (intensity == 1)
+            emission = dim;
+        else
+            emission = bright;
+        Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
+        material.SetColor("_EmissionColor", finalColor);
     }
 }
