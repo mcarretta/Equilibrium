@@ -52,11 +52,20 @@ public class PlayerAttack : MonoBehaviour
             if (Physics.Raycast(ray, out hit, absorbRange))  //raycast dal centro dello schermo fino a distanza absorbRange
             {
                 LightSource ls = hit.collider.gameObject.GetComponent<LightSource>();
-                if (ls != null && ls.getIntensity() < ls.getMaxIntensity()) //se è una sorgente di luce e non è piena di lue
+                LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
+                //se è una sorgente di luce e non è piena di luce
+                if (ls != null && ls.getIntensity() < ls.getMaxIntensity()) 
                 {
                     print("light released");
                     ls.putLight();
                     --light;
+                }
+                //se è un trigger e non è attivo, lo attivo
+                if (lt != null && !lt.IsTriggered())
+                {
+                    lt.Trigger();
+                    --light;
+                    print("attivo bottone");
                 }
             }
         }
