@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -9,14 +10,17 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Camera camera;
     [SerializeField] private GameObject lightBulletPrefab;
     [SerializeField] private Transform firepoint;
+    [SerializeField] private Text lightBulletText;
 
     void Start()
     {
-        
+        lightBulletText.text = "LIGHT: " + light;
     }
 
     void Update()
     {
+        if (PauseMenu.gameIsPaused)
+            return;
         AbsorbLight();
         PutLight();
         ShootLight();
@@ -36,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
                 {
                     print("light absorbed");
                     ls.takeLight();
-                    ++light;
+                    ++Light;
                 }
             }                    
         }
@@ -45,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
     //rimette la luce in una sorgente
     private void PutLight()
     {
-        if (Input.GetButtonDown("PutLight") && light > 0) //se premo la E
+        if (Input.GetButtonDown("PutLight") && Light > 0) //se premo la E
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -58,13 +62,13 @@ public class PlayerAttack : MonoBehaviour
                 {
                     print("light released");
                     ls.putLight();
-                    --light;
+                    --Light;
                 }
                 //se è un trigger e non è attivo, lo attivo
                 if (lt != null && !lt.IsTriggered())
                 {
                     lt.Trigger();
-                    --light;
+                    --Light;
                     print("attivo bottone");
                 }
             }
@@ -76,11 +80,23 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("ShootLight") && light > 0) //se premo il tasto sinistro e ho munizioni di luce
         {
-            --light;
+            --Light;
             GameObject bullet = Instantiate(lightBulletPrefab);
             bullet.transform.position = camera.transform.position;
             bullet.transform.forward = camera.transform.forward;
-            print("munitions: " + light);
         } 
+    }
+
+    public int Light
+    {
+        get
+        {
+            return light;
+        }
+        set
+        {
+            light = value;
+            lightBulletText.text = "LIGHT: " + light;
+        }
     }
 }
