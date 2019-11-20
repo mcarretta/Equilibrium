@@ -29,7 +29,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
             joystickConnected = isJoystickConnected();
-            Debug.Log(joystickConnected);
         }
 
         private bool isJoystickConnected()
@@ -104,9 +103,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if(Input.GetKeyUp(KeyCode.Escape))
             {
-                m_cursorIsLocked = false;
+               m_cursorIsLocked = false;
             }
-            else if(Input.GetMouseButtonUp(0))
+
+            else if(Input.GetMouseButtonUp(0) || !PauseMenu.gameIsPaused)
             {
                 m_cursorIsLocked = true;
             }
