@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        lightBulletText.text = "LIGHT: " + light;
+        //lightBulletText.text = "LIGHT: " + light;
     }
 
     void Update()
@@ -96,7 +96,7 @@ public class PlayerAttack : MonoBehaviour
         set
         {
             light = value;
-            lightBulletText.text = "LIGHT: " + light;
+            //lightBulletText.text = "LIGHT: " + light;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using AI;
 using UnityEngine;
 
 public class AICombat : MonoBehaviour
@@ -33,6 +34,7 @@ public class AICombat : MonoBehaviour
         _health -= energy;
         if (_health <= 0)
         {
+            AICoordinator.Instance.ProcessDeath(gameObject);
             Destroy(gameObject);
         }
             

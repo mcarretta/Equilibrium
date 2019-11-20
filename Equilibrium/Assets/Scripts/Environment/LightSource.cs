@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using AI;
 using UnityEngine;
 
 public class LightSource : MonoBehaviour
@@ -40,7 +41,11 @@ public class LightSource : MonoBehaviour
         }
 
         if (intensity == 0)
+        {
             lightPrefab.enabled = false; //se non c'è luce disabilito il prefab
+            AICoordinator.Instance.ProcessEventTrigger(100.0f);
+        }
+            
     }
 
     public void putLight()
