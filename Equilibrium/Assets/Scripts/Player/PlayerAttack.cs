@@ -96,7 +96,8 @@ public class PlayerAttack : MonoBehaviour
         set
         {
             light = value;
-            //lightBulletText.text = "LIGHT: " + light;
+            if(lightBulletText != null)
+                lightBulletText.text = "LIGHT: " + light;
         }
     }
 }
