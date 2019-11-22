@@ -14,7 +14,8 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        //lightBulletText.text = "LIGHT: " + light;
+        if(lightBulletText != null)
+            lightBulletText.text = "LIGHT: " + light;
     }
 
     void Update()
