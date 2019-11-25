@@ -16,7 +16,8 @@ public class LevelsManager : Singleton<LevelsManager>
 
     public void LoadNextLevel()
     {
-        if (index >= levels.Count)
+        print("ready to load next level... index == " + index);
+        if (index + 1 >= levels.Count)
         {
             print("non c'è un livello successivo");
             return;
