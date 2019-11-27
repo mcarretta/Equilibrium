@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 3229681909212163856}
   - component: {fileID: 7148667717986290991}
   - component: {fileID: 1913194226461980217}
+  - component: {fileID: 1913194226461980218}
   m_Layer: 5
   m_Name: DeathMenu
   m_TagString: Untagged
@@ -396,6 +397,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be30bead8df56894189f4c26e7981eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1913194226461980218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913194226461980216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fcd355ede38e64c8b3bcc22248a945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedButton: {fileID: 6228224567735532440}
+  eventSystem: {fileID: 26336057}
 --- !u!222 &2013214563685474378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -552,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 2
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -685,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 2
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

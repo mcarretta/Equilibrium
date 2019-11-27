@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - CharacterControllerTest
-  - AI_test
+  - NextLevelTest
   deathMenu: DeathMenu

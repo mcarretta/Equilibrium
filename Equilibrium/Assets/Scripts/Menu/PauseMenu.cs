@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+
 
     void Update()
     {
@@ -36,8 +39,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true); //abilito il menù di pausa
         Time.timeScale = 0f; //metto in pausa il gioco
         gameIsPaused = true;
-        Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
-        Cursor.visible = true; //lo rendo visibile
+        /*Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
+        Cursor.visible = true; //lo rendo visibile*/
     } 
 
     public void Retry()
