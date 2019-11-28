@@ -30,8 +30,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false); //abilito il menù di pausa
         Time.timeScale = 1f; //tempo normale di scorrimento del gioco
         gameIsPaused = false;
-        Cursor.lockState = CursorLockMode.Locked; //blocco il cursore al centro
-        Cursor.visible = false; //lo rendo invisibile
+        /*Cursor.lockState = CursorLockMode.Locked; //blocco il cursore al centro
+        Cursor.visible = false; //lo rendo invisibile*/
     }
 
     private void Pause()

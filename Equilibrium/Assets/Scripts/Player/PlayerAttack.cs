@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject lightBulletPrefab;
     [SerializeField] private Transform firepoint;
     [SerializeField] private Text lightBulletText;
+    [SerializeField] private float cooldownTime = 2; //tempo di ricarica tra un attacco e l'altro
+    private bool onCooldown = false;
 
     void Start()
     {
@@ -22,13 +24,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if (PauseMenu.gameIsPaused)
             return;
-        AbsorbLight();
-        PutLight();
+        ControlLight();
         ShootLight();
     }
 
     //assorbe luce da una sorgente
-    private void AbsorbLight()
+    private void ControlLight()
     {
         if (Input.GetButtonDown("AbsorbLight")) //se premo il tasto destro
         {
@@ -36,56 +37,53 @@ public class PlayerAttack : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, absorbRange))  //raycast dal centro dello schermo fino a distanza absorbRange
             {
-                LightSource ls = hit.collider.gameObject.GetComponent<LightSource>();
-                if (ls != null && ls.getIntensity() > 0) //se è una sorgente di luce ed è accesa, prendo munizioni
+                print("colpito qualcosa");
+                LightSource2 ls = hit.collider.gameObject.GetComponent<LightSource2>();
+                LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
+                //se è una sorgente di luce ed è accesa --> prendo munizioni
+                if (ls != null && ls.takeLight()) 
                 {
                     print("light absorbed");
-                    ls.takeLight();
                     ++Light;
                 }
-            }                    
-        }
-    }
-
-    //rimette la luce in una sorgente
-    private void PutLight()
-    {
-        if (Input.GetButtonDown("PutLight") && Light > 0) //se premo la E
-        {
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, absorbRange))  //raycast dal centro dello schermo fino a distanza absorbRange
-            {
-                LightSource ls = hit.collider.gameObject.GetComponent<LightSource>();
-                LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
-                //se è una sorgente di luce e non è piena di luce
-                if (ls != null && ls.getIntensity() < ls.getMaxIntensity()) 
+                //se è una sorgente di luce ed è spenta, e ho munizioni --> rilascio luce
+                else if (ls != null && Light > 0 && ls.PutLight()) 
                 {
                     print("light released");
-                    ls.putLight();
                     --Light;
                 }
                 //se è un trigger e non è attivo, lo attivo
-                if (lt != null && !lt.IsTriggered())
+                else if (lt != null && Light > 0 && !lt.IsTriggered())
                 {
                     lt.Trigger();
                     --Light;
                     print("attivo bottone");
                 }
-            }
+            }                    
         }
     }
 
     //spara un proiettile di luce
-    private void ShootLight ()
+    private void ShootLight()
     {
+        if (onCooldown) //se ho appena sparato sono in cooldown
+            return;
+
         if (Input.GetButtonDown("ShootLight") && light > 0) //se premo il tasto sinistro e ho munizioni di luce
         {
             --Light;
             GameObject bullet = Instantiate(lightBulletPrefab);
             bullet.transform.position = camera.transform.position;
             bullet.transform.forward = camera.transform.forward;
+            StartCoroutine(Cooldown());
         } 
+    }
+
+    private IEnumerator Cooldown()
+    {
+        onCooldown = true;
+        yield return new WaitForSeconds(cooldownTime);
+        onCooldown = false;
     }
 
     public int Light
