@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,14 +11,15 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Camera camera;
     [SerializeField] private GameObject lightBulletPrefab;
     [SerializeField] private Transform firepoint;
-    [SerializeField] private Text lightBulletText;
+    [SerializeField] private TextMeshProUGUI lightBulletText;
     [SerializeField] private float cooldownTime = 2; //tempo di ricarica tra un attacco e l'altro
     private bool onCooldown = false;
 
     void Start()
     {
-        if(lightBulletText != null)
-            lightBulletText.text = "LIGHT: " + light;
+        lightBulletText = lightBulletText.GetComponent<TextMeshProUGUI>();
+        if (lightBulletText != null)
+            lightBulletText.text = "LIGHT " + light;
     }
 
     void Update()
@@ -96,7 +98,7 @@ public class PlayerAttack : MonoBehaviour
         {
             light = value;
             if(lightBulletText != null)
-                lightBulletText.text = "LIGHT: " + light;
+                lightBulletText.text = "LIGHT " + light;
         }
     }
 }

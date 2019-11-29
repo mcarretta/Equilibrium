@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1545458642126120007}
   - component: {fileID: 3259145753502062921}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6300608422037911336}
   - component: {fileID: 8846210117815803735}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2536689506143088951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 8434587453070333146}
   - component: {fileID: 6695697358939260162}
   - component: {fileID: 8254318755793472229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallLight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

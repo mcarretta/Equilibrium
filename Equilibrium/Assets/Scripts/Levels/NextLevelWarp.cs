@@ -6,6 +6,7 @@ public class NextLevelWarp : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        LevelsManager.Instance.LoadNextLevel();
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player")) //se è un oggetto sul layer player
+            LevelsManager.Instance.LoadNextLevel();
     }
 }

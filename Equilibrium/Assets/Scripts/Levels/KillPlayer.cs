@@ -7,6 +7,7 @@ public class KillPlayer : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        LevelsManager.Instance.LoadDeathMenu();
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player")) //se è un oggetto sul layer player
+            LevelsManager.Instance.LoadDeathMenu();
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4465360245664829211}
   - component: {fileID: 494023873497726167}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4614865997966608698}
   - component: {fileID: 9043801235539164030}
   - component: {fileID: 2417998089389591839}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CeilingLight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
