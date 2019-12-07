@@ -1814,7 +1814,7 @@ GameObject:
   - component: {fileID: 2232746046671237811}
   - component: {fileID: 2232746046671237801}
   m_Layer: 0
-  m_Name: AIThirdPersonController
+  m_Name: AIEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1829,7 +1829,7 @@ Transform:
   m_GameObject: {fileID: 2232746047482014095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.18, y: 0, z: 27.89}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 2232746047482213291}
   - {fileID: 2232746047482137305}
