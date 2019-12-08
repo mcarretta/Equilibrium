@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CharacterControllerTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DeathMenu.unity
     guid: 81b0a88efb45c6a4f867b0ac5cfdd8c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NextLevelTest.unity
     guid: 2024091b5e34f59468112e2cc6be6fef
   - enabled: 0
     path: Assets/Scenes/AI_test.unity
     guid: c1f7330cada49d543b342a0262eddf7b
+  - enabled: 1
+    path: Assets/Scenes/Prototype.unity
+    guid: b5552d573df7a09449496b8fdcae36c2
   m_configObjects: {}
