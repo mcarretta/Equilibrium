@@ -11,6 +11,9 @@ public class SelectFirstItem : MonoBehaviour
 
     private void OnEnable()
     {
+        //se non è connesso il joystick non serve evidenziare il primo elemento
+        if (!UnityStandardAssets.Characters.FirstPerson.MouseLook.joystickConnected)
+            return;
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
         StartCoroutine(SelectBtnFix());
         print("seleziono bottone");

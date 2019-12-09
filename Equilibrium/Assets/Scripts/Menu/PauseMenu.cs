@@ -30,8 +30,12 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false); //abilito il menù di pausa
         Time.timeScale = 1f; //tempo normale di scorrimento del gioco
         gameIsPaused = false;
-        /*Cursor.lockState = CursorLockMode.Locked; //blocco il cursore al centro
-        Cursor.visible = false; //lo rendo invisibile*/
+        if(!UnityStandardAssets.Characters.FirstPerson.MouseLook.joystickConnected)
+        {
+            Cursor.lockState = CursorLockMode.Locked; //blocco il cursore al centro
+            Cursor.visible = false; //lo rendo invisibile
+        }
+
     }
 
     private void Pause()
@@ -39,8 +43,12 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true); //abilito il menù di pausa
         Time.timeScale = 0f; //metto in pausa il gioco
         gameIsPaused = true;
-        /*Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
-        Cursor.visible = true; //lo rendo visibile*/
+        if (!UnityStandardAssets.Characters.FirstPerson.MouseLook.joystickConnected)
+        {
+            Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
+            Cursor.visible = true; //lo rendo visibile
+        }
+
     } 
 
     public void Retry()
