@@ -51,19 +51,19 @@ public class PlayerAttack : MonoBehaviour
                 LightSource2 ls = hit.collider.gameObject.GetComponent<LightSource2>();
                 LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
                 //se è una sorgente di luce ed è accesa --> prendo munizioni
-                if (ls != null && ls.takeLight()) 
+                if (ls && ls.takeLight()) 
                 {
                     print("light absorbed");
                     ++Light;
                 }
                 //se è una sorgente di luce ed è spenta, e ho munizioni --> rilascio luce
-                else if (ls != null && Light > 0 && ls.PutLight()) 
+                else if (ls && Light > 0 && ls.PutLight()) 
                 {
                     print("light released");
                     --Light;
                 }
                 //se è un trigger e non è attivo, lo attivo
-                else if (lt != null && Light > 0 && !lt.IsTriggered())
+                else if (lt && Light > 0 && !lt.IsTriggered())
                 {
                     lt.Trigger();
                     --Light;

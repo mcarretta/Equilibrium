@@ -48,7 +48,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3.8
+  m_Height: 1.3
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.9
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsWalking: 0
   m_WalkSpeed: 5
-  m_RunSpeed: 10
+  m_RunSpeed: 7
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
@@ -390,8 +390,9 @@ MonoBehaviour:
   lantern: {fileID: 1390055104830058726}
   firepoint: {fileID: 2900604507932753735}
   lightBulletText: {fileID: 0}
+  lanternText: {fileID: 0}
   shootCooldownTime: 2
-  lanterCooldownTime: 3
+  lanternCooldownTime: 3
 --- !u!81 &8100000
 AudioListener:
   m_ObjectHideFlags: 0

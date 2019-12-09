@@ -8,8 +8,11 @@ namespace AI
         // Start is called before the first frame update
         
         public float stopDistance = 50;
+        public float sightDistance = 100f;
+        public float AISpeed =0.4f;
         public bool isSearching;
         public bool enableRayCastingVision = true;
+        public float proximityThreshold = 5;
         public GameObject player;
         
         private GameObject _aiGameObject;
@@ -42,7 +45,7 @@ namespace AI
                 {
                     if (IsInSight(player, _playerColliderName))
                     {
-                        _mNavMeshAgent.speed = 0.4f;
+                        _mNavMeshAgent.speed = AISpeed;
                     }
                     // Stop only if player is far enough
                     // TODO define stopping distance
@@ -66,7 +69,7 @@ namespace AI
             // Debug.DrawRay(transform.position, aiForward, Color.blue);
             // Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
         
-            if (Vector3.Angle(aiForward, playerDirection) < 62f)
+            if ((Vector3.Angle(aiForward, playerDirection) < 62f) || (Vector3.Distance(player.transform.position, transform.position) < proximityThreshold) )
             {
                 // Debug.Log("In sight!");
             
@@ -75,7 +78,7 @@ namespace AI
                 RaycastHit hit;
             
                 // Then, check if the player is hidden by objects
-                if (Physics.Raycast(forwardRay, out hit, 100f) && hit.collider.name == playerCollider)
+                if (Physics.Raycast(forwardRay, out hit, sightDistance) && hit.collider.name == playerCollider)
                 {
                     return true;
                 }
