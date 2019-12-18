@@ -11,6 +11,11 @@ public class LightSource2 : MonoBehaviour
     private void Start()
     {
         material = GetComponent<Renderer>().material;
+        if(!lit)
+        {
+            material.DisableKeyword("_EMISSION");
+            lightPrefab.SetActive(false);
+        }
     }
 
     public bool isLit()

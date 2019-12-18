@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject lantern;
     [SerializeField] private Transform firepoint;
     [SerializeField] private TextMeshProUGUI lightBulletText;
-    [SerializeField] private TextMeshProUGUI lanternText;
+    [SerializeField] private GameObject lanternRadialBar;
 
     [SerializeField] private float shootCooldownTime = 2; //tempo di ricarica tra un attacco e l'altro
     private bool shootOnCooldown = false;
@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         lightBulletText = lightBulletText.GetComponent<TextMeshProUGUI>();
-        lanternText = lanternText.GetComponent<TextMeshProUGUI>();
+        lanternRadialBar.GetComponent<RadialProgressBar>().maxTime = lanternCooldownTime * 2;
         if (lightBulletText != null)
             lightBulletText.text = "LIGHT " + light;
     }
@@ -50,25 +50,19 @@ public class PlayerAttack : MonoBehaviour
                 print("colpito qualcosa");
                 LightSource2 ls = hit.collider.gameObject.GetComponent<LightSource2>();
                 LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
-                //se è una sorgente di luce ed è accesa --> prendo munizioni
-                if (ls && ls.takeLight()) 
+
+                if(ls) //se è una sorgente di luce
                 {
-                    print("light absorbed");
-                    ++Light;
+                    if (ls.takeLight()) //se è accesa --> prendo luce
+                        Light++;
+
+                    else if (Light > 0 && ls.PutLight()) // se è spenta e ho munizioni --> rilascio luce
+                        Light--;
+
+                    if (lt) //se è uno switch per le porte lo triggero
+                        lt.Trigger();
                 }
-                //se è una sorgente di luce ed è spenta, e ho munizioni --> rilascio luce
-                else if (ls && Light > 0 && ls.PutLight()) 
-                {
-                    print("light released");
-                    --Light;
-                }
-                //se è un trigger e non è attivo, lo attivo
-                else if (lt && Light > 0 && !lt.IsTriggered())
-                {
-                    lt.Trigger();
-                    --Light;
-                    print("attivo bottone");
-                }
+
             }                    
         }
     }
@@ -112,12 +106,11 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator LanternCooldown()
     {
         lanternOnCooldown = true; // la lanterna entra in cooldown
-        lanternText.SetText("LANTERN\nNOT READY");
+        lanternRadialBar.GetComponent<RadialProgressBar>().StartLoading();
         yield return new WaitForSeconds(lanternCooldownTime);
         lantern.SetActive(false); //dopo n secondi si spegne
         yield return new WaitForSeconds(lanternCooldownTime); //sta in cooldown n secondi
         lanternOnCooldown = false; //esce dal cooldown
-        lanternText.SetText("LANTERN\nREADY");
     }
 
     public int Light

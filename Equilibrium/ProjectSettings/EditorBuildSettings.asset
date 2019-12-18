@@ -15,12 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AI_test.unity
     guid: c1f7330cada49d543b342a0262eddf7b
   - enabled: 1
-    path: Assets/Scenes/DeathMenu.unity
-    guid: 81b0a88efb45c6a4f867b0ac5cfdd8c2
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Scenes/Prototype.unity
     guid: d7144a390cf581f468109f2459474506
+  - enabled: 1
+    path: Assets/Scenes/DeathMenu.unity
+    guid: 81b0a88efb45c6a4f867b0ac5cfdd8c2
   m_configObjects: {}

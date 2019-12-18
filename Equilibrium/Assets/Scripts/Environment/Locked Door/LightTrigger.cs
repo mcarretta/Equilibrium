@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightTrigger : MonoBehaviour
 {
-    private bool triggered;
+    private bool triggered = false;
 
     void Start()
     {
@@ -18,6 +18,7 @@ public class LightTrigger : MonoBehaviour
 
     public void Trigger()
     {
-        triggered = true;
+        triggered = !triggered;
+        print("bottone = " + triggered);
     }
 }
