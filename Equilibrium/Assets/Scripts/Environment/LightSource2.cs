@@ -7,14 +7,24 @@ public class LightSource2 : MonoBehaviour
     [SerializeField] private bool lit = true;
     [SerializeField] private GameObject lightPrefab; //luce figlia dell'oggetto sorgente di luce
     private Material material; //materiale emissivo
+    private Color emissionColor;
+    private LightFlickerEffect lfe;
 
     private void Start()
     {
         material = GetComponent<Renderer>().material;
-        if(!lit)
+        emissionColor = material.GetColor("_EmissionColor");
+        lfe = GetComponent<LightFlickerEffect>();
+
+        if (!lit) //se luce è spenta
         {
-            material.DisableKeyword("_EMISSION");
+            lfe.enabled = true;
             lightPrefab.SetActive(false);
+        }
+        else
+        {
+            lightPrefab.SetActive(true);
+            lfe.enabled = false;
         }
     }
 
@@ -28,8 +38,8 @@ public class LightSource2 : MonoBehaviour
     {
         if (lit)
         {
-            print("disabilito emissione");
-            material.DisableKeyword("_EMISSION");
+            //material.DisableKeyword("_EMISSION");
+            lfe.enabled = true; //attivo il flickering, se nello script del flickering l'effetto è disattivo la luce sarà leggermente accesa 
             lightPrefab.SetActive(false);
             lit = false;
             return true;
@@ -41,8 +51,9 @@ public class LightSource2 : MonoBehaviour
     {
         if (!lit)
         {
-            print("abilito emissione");
-            material.EnableKeyword("_EMISSION");
+            //material.EnableKeyword("_EMISSION");
+            lfe.enabled = false;
+            material.SetColor("_EmissionColor", emissionColor); //rimetto emissione al massimo
             lightPrefab.SetActive(true);
             lit = true;
             return true;

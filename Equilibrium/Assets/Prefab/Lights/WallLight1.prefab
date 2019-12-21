@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3151541987105023579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47, y: 0, z: -0.97}
+  m_LocalPosition: {x: -0.47, y: -0.484, z: -0.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2536689506143088951}
@@ -42,8 +42,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0, g: 1, b: 0.118644, a: 1}
-  m_Intensity: 1.5
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4053883318568012743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 0, z: 0.86}
+  m_LocalPosition: {x: 0.49, y: -0.54, z: 0.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2536689506143088951}
@@ -133,8 +133,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1.5
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 8434587453070333146}
   - component: {fileID: 6695697358939260162}
   - component: {fileID: 8254318755793472229}
+  - component: {fileID: 5582772690841297388}
   m_Layer: 10
   m_Name: WallLight1
   m_TagString: Untagged
@@ -336,3 +337,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40418625, y: 0.4735158, z: 0.42859268}
   m_Center: {x: 0.42795753, y: -0.2367579, z: 0.85591316}
+--- !u!114 &5582772690841297388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359002400211703730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcd4843cb724224e926c77fcf144722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 3259145753502062921}
+  minIntensity: 0
+  maxIntensity: 0.2
+  smoothing: 1
+  flickerSpeed: 0.1
+  effectActive: 1
