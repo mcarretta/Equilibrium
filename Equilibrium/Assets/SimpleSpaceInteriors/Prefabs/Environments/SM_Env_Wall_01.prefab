@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2359506}
   - component: {fileID: 8082285857875359540}
   - component: {fileID: 6654098224260085961}
+  - component: {fileID: 492871193584519524}
   m_Layer: 0
   m_Name: SM_Env_Wall_01
   m_TagString: Untagged
@@ -112,6 +113,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 2.5, y: 2.5, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &492871193584519524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 0.3}
+  m_Center: {x: 2.500002, y: 2.5, z: 0}
 --- !u!1001 &8667328711163672482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,11 +133,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 415336}
     m_Modifications:
-    - target: {fileID: 1927062682631110605, guid: 3367c685f49708f40b85eca7db677adc,
-        type: 3}
-      propertyPath: m_Name
-      value: Emissive_Stripe
-      objectReference: {fileID: 0}
     - target: {fileID: 1927062682631201773, guid: 3367c685f49708f40b85eca7db677adc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -179,6 +188,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1927062682631110605, guid: 3367c685f49708f40b85eca7db677adc,
+        type: 3}
+      propertyPath: m_Name
+      value: Emissive_Stripe
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3367c685f49708f40b85eca7db677adc, type: 3}
 --- !u!4 &7131103416118449231 stripped
@@ -194,11 +208,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 415336}
     m_Modifications:
-    - target: {fileID: 1927062682631110605, guid: 3367c685f49708f40b85eca7db677adc,
-        type: 3}
-      propertyPath: m_Name
-      value: Emissive_Stripe
-      objectReference: {fileID: 0}
     - target: {fileID: 1927062682631201773, guid: 3367c685f49708f40b85eca7db677adc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -253,6 +262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927062682631110605, guid: 3367c685f49708f40b85eca7db677adc,
+        type: 3}
+      propertyPath: m_Name
+      value: Emissive_Stripe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3367c685f49708f40b85eca7db677adc, type: 3}

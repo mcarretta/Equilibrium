@@ -32,7 +32,10 @@ public class AICombat : MonoBehaviour
 
         m_ShaderProperty = Shader.PropertyToID("_cutoff");
         m_Renderer = GetComponentInChildren<Renderer>();
+        
         ps = GetComponentInChildren <ParticleSystem>();
+        
+        Debug.Log(ps.tag);
 
         var main = ps.main;
         main.duration = spawnEffectTime;
