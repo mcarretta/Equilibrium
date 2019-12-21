@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1058704703226785258}
   - component: {fileID: 2143430258506885814}
   - component: {fileID: 1256208881589472347}
+  - component: {fileID: 6368550617067554751}
   m_Layer: 10
   m_Name: CeilingLight1
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c24dbcc1fd8f1c041a3f2876b1e1017a, type: 2}
+  - {fileID: 2100000, guid: 3f8f71c40ce54be47aee10126a1b05b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,6 +110,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lit: 1
   lightPrefab: {fileID: 5443195742748875225}
+--- !u!114 &6368550617067554751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058704703228983316}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcd4843cb724224e926c77fcf144722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 6426894113704024331}
+  minIntensity: 0
+  maxIntensity: 0.2
+  smoothing: 1
+  flickerSpeed: 0.1
+  effectActive: 1
 --- !u!1 &5443195742748875225
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,8 +170,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.8
-  m_Range: 20
+  m_Intensity: 1
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

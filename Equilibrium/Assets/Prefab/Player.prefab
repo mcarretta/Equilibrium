@@ -48,7 +48,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.3
+  m_Height: 2
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.9
@@ -390,7 +390,7 @@ MonoBehaviour:
   lantern: {fileID: 1390055104830058726}
   firepoint: {fileID: 2900604507932753735}
   lightBulletText: {fileID: 0}
-  lanternText: {fileID: 0}
+  lanternRadialBar: {fileID: 0}
   shootCooldownTime: 2
   lanternCooldownTime: 3
 --- !u!81 &8100000
@@ -434,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390055104830058726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.65}
+  m_LocalPosition: {x: 0, y: 0.13, z: 0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -451,8 +451,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 1.5
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

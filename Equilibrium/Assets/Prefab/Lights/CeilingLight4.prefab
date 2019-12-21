@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8263732369011651175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.325, z: 0}
+  m_LocalPosition: {x: 0, y: -0.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8623870998538053436}
@@ -42,8 +42,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.8
-  m_Range: 10
+  m_Intensity: 1
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -102,8 +102,9 @@ GameObject:
   - component: {fileID: 8623870998538053436}
   - component: {fileID: 8623870998536745438}
   - component: {fileID: 8623870998535613420}
-  - component: {fileID: 216298471734840635}
   - component: {fileID: 3782863736902996199}
+  - component: {fileID: 2072118623664337853}
+  - component: {fileID: 7060528942126032683}
   m_Layer: 10
   m_Name: CeilingLight4
   m_TagString: Untagged
@@ -172,20 +173,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &216298471734840635
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8623870998537807832}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: d208f3097feb2ee4eb6e4a98c828af64, type: 3}
 --- !u!114 &3782863736902996199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +187,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lit: 1
   lightPrefab: {fileID: 8263732369011651175}
+--- !u!114 &2072118623664337853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623870998537807832}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcd4843cb724224e926c77fcf144722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 3759281766799179569}
+  minIntensity: 0
+  maxIntensity: 0.2
+  smoothing: 1
+  flickerSpeed: 0.1
+  effectActive: 1
+--- !u!65 &7060528942126032683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623870998537807832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8336902, y: 0.36969376, z: 0.555298}
+  m_Center: {x: 0, y: -0.18484688, z: 0}
