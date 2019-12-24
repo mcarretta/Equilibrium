@@ -46,4 +46,11 @@ MonoBehaviour:
   levels:
   - CharacterControllerTest
   - NextLevelTest
+  - Prototype
+  - AI_test
+  - Not working
+  - Not working
+  - Not working
+  - Not working
   deathMenu: DeathMenu
+  mainMenu: MainMenu
