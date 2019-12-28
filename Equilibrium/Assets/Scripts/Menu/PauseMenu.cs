@@ -35,7 +35,6 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked; //blocco il cursore al centro
             Cursor.visible = false; //lo rendo invisibile
         }
-
     }
 
     private void Pause()
@@ -48,7 +47,6 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
             Cursor.visible = true; //lo rendo visibile
         }
-
     } 
 
     public void Retry()
@@ -59,7 +57,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
-        print("quitting...");
+        gameIsPaused = false;
+        Time.timeScale = 1f; //tempo normale di scorrimento del gioco
+        if (!UnityStandardAssets.Characters.FirstPerson.MouseLook.joystickConnected)
+        {
+            Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
+            Cursor.visible = true; //lo rendo visibile
+        }
+        LevelsManager.Instance.LoadMainMenu();
     }
 }

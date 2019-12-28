@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 115189569}
   - component: {fileID: 115189568}
   m_Layer: 5
-  m_Name: BtnQuit
+  m_Name: BtnMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -218}
-  m_SizeDelta: {x: 509.4, y: 163.6}
+  m_SizeDelta: {x: 600, y: 163.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115189570
 CanvasRenderer:
@@ -296,7 +296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUIT
+  m_Text: MAIN MENU
 --- !u!114 &225610822
 MonoBehaviour:
   m_ObjectHideFlags: 0

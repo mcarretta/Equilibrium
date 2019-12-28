@@ -77,7 +77,7 @@ public class PlayerAttack : MonoBehaviour
         {
             --Light;
             GameObject bullet = Instantiate(lightBulletPrefab);
-            bullet.transform.position = camera.transform.position;
+            bullet.transform.position = firepoint.transform.position;
             bullet.transform.forward = camera.transform.forward;
             StartCoroutine(ShootCooldown());
         } 

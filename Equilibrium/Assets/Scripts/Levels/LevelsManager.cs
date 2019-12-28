@@ -20,7 +20,7 @@ public class LevelsManager : Singleton<LevelsManager>
     public void LoadLevelByIndex(int i)
     {
         if (index + 1 >= levels.Count || index < 0)
-            print("indice inesistente");
+            print("LoadLevelByIndex: indice inesistente");
         else
         {
             index = i;
@@ -32,27 +32,28 @@ public class LevelsManager : Singleton<LevelsManager>
     public void LoadCurrentLevel()
     {
         SceneManager.LoadScene(levels[index]);
+        print("LoadCurrentLevel: success");
     }
 
     //carica il primo livello del gioco con new game
     public void LoadFirstLevel()
     {
-        print("ready to load the first level");
         index = 0;
         SceneManager.LoadScene(levels[index]);
+        print("LoadFirstLevel: success");
     }
 
     //carica il livello successivo quando si arriva alla fine di un livello
     public void LoadNextLevel()
     {
-        print("ready to load next level... index == " + index);
         if (index + 1 >= levels.Count)
         {
-            print("non c'è un livello successivo");
+            print("LoadNextLevel: level not found");
             return;
         }
         ++index;
         SceneManager.LoadScene(levels[index]);
+        print("LoadNextLevel: success on level of index " + index);
     }
 
     //carica livello precedente
@@ -60,22 +61,25 @@ public class LevelsManager : Singleton<LevelsManager>
     {
         if (index <= 0)
         {
-            print("non c'è un livello precedente");
+            print("LoadPreviousLevel: level not found");
             return;
         }
 
         --index;
+        print("LoadPreviousLevel: success on level of index " + index);
         SceneManager.LoadScene(levels[index]);
     }
 
     public void LoadMainMenu()
     {
+        print("LoadMainMenu: success");
         SceneManager.LoadScene(mainMenu);
     }
 
     //menu quando si muore
     public void LoadDeathMenu()
     {
+        print("LoadDeathMenu: success");
         SceneManager.LoadScene(deathMenu);
     }
 
