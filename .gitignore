@@ -46,3 +46,5 @@ Equilibrium/.DS_Store
 .DS_Store
 
 New Unity Project/
+
+*.meta
