@@ -68,24 +68,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
-
-            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
-            {
-                StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
-                m_MoveDir.y = 0f;
-                m_Jumping = false;
-            }
-            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-            {
-                m_MoveDir.y = 0f;
-            }
-
-            m_PreviouslyGrounded = m_CharacterController.isGrounded;
+//            if (!m_Jump)
+//            {
+//                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+//            }
+//
+//            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+//            {
+//                StartCoroutine(m_JumpBob.DoBobCycle());
+//                PlayLandingSound();
+//                m_MoveDir.y = 0f;
+//                m_Jumping = false;
+//            }
+//            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+//            {
+//                m_MoveDir.y = 0f;
+//            }
+//
+//            m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
 
@@ -118,13 +118,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
-                if (m_Jump)
-                {
-                    m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
-                }
+//                if (m_Jump)
+//                {
+//                    m_MoveDir.y = m_JumpSpeed;
+//                    PlayJumpSound();
+//                    m_Jump = false;
+//                    m_Jumping = true;
+//                }
             }
             else
             {
@@ -217,7 +217,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetButton("Run");
+            //m_IsWalking = !Input.GetButton("Run");
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
