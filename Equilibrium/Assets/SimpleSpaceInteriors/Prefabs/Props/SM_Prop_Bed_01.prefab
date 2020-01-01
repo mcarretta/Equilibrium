@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 400202}
   - component: {fileID: 3302152}
   - component: {fileID: 2313726}
+  - component: {fileID: -2309871881648064002}
   m_Layer: 0
   m_Name: SM_Prop_Bed_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-2309871881648064002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7884712, y: 3.4185963, z: 0.4428134}
+  m_Center: {x: 0, y: 1.7092981, z: -0.00000023841858}

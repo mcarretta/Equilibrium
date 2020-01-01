@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 419820}
   - component: {fileID: 3325022}
   - component: {fileID: 2384240}
+  - component: {fileID: -2102810220580530950}
+  - component: {fileID: 7863707942248145676}
   m_Layer: 0
   m_Name: SM_Prop_Lander_01
   m_TagString: Untagged
@@ -78,3 +80,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-2102810220580530950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 6.441166, y: 2.4878814, z: 6.4411583}
+  m_Center: {x: 0, y: 1.2439407, z: 0.0000019073486}
+--- !u!64 &7863707942248145676
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: fefe2c9b89c004b4bab189a545e5661c, type: 3}

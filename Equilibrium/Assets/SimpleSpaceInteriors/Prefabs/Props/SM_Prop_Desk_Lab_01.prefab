@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 484996}
   - component: {fileID: 3369456}
   - component: {fileID: 2356732}
+  - component: {fileID: -5125879903962713161}
   m_Layer: 0
   m_Name: SM_Prop_Desk_Lab_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-5125879903962713161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.56714, y: 2.6309586, z: 2.0946503}
+  m_Center: {x: -0.00000023841858, y: 1.3154793, z: 0}

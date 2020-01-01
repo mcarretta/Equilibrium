@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 446220}
   - component: {fileID: 3399638}
   - component: {fileID: 2375332}
+  - component: {fileID: -9118851840180546704}
+  - component: {fileID: 8869063235361807854}
   m_Layer: 0
   m_Name: SM_Prop_Rocket_01
   m_TagString: Untagged
@@ -78,3 +80,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-9118851840180546704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10.070999, y: 18.516888, z: 8.863533}
+  m_Center: {x: 0, y: 9.258444, z: -0.0000038146973}
+--- !u!64 &8869063235361807854
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 1a3f1da6f48a8454da0c67ba1d27bfb4, type: 3}

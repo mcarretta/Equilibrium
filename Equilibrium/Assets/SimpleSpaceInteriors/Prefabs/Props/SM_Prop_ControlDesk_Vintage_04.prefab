@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 444756}
   - component: {fileID: 3313586}
   - component: {fileID: 2335094}
+  - component: {fileID: 9071506520356620718}
   m_Layer: 0
   m_Name: SM_Prop_ControlDesk_Vintage_04
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9071506520356620718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.6036453, y: 2.781357, z: 3.325127}
+  m_Center: {x: 0, y: 1.3906785, z: 0.00000011920929}
