@@ -122,12 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcd4843cb724224e926c77fcf144722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 6426894113704024331}
+  light: {fileID: 5443195742748875225}
   minIntensity: 0
   maxIntensity: 0.2
   smoothing: 1
   flickerSpeed: 0.1
-  effectActive: 1
+  brokenLightEffect: 0
 --- !u!1 &5443195742748875225
 GameObject:
   m_ObjectHideFlags: 0

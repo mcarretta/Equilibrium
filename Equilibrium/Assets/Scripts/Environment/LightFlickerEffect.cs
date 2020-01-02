@@ -15,7 +15,7 @@ using System.Collections;
 public class LightFlickerEffect : MonoBehaviour
 {
     [Tooltip("External light to flicker; you can leave this null if you attach script to a light")]
-    public new Light light;
+    public GameObject light;
     [Tooltip("Minimum random light intensity")]
     public float minIntensity = 0f;
     [Tooltip("Maximum random light intensity")]
@@ -28,7 +28,8 @@ public class LightFlickerEffect : MonoBehaviour
     private Color emissionColor;
     [Range(0.01f, 1)]
     public float flickerSpeed;
-    public bool effectActive;
+    [Tooltip("The light illuminates flickering also when turned off")]
+    public bool brokenLightEffect;
 
     // Continuous average calculation via FIFO queue
     // Saves us iterating every time we update, we just change by the delta
@@ -60,14 +61,8 @@ public class LightFlickerEffect : MonoBehaviour
             material = GetComponent<Renderer>().material;
 
         emissionColor = material.GetColor("_EmissionColor");
-        // External or internal light?
-        if (light == null)
-            light = GetComponent<Light>();
 
-        if(effectActive)
-            StartCoroutine(Flicker(flickerSpeed));
-        else
-            material.SetColor("_EmissionColor", emissionColor * 0.2f);
+        StartCoroutine(Flicker(flickerSpeed));
     }
 
     private IEnumerator Flicker(float flickerSpeed)
@@ -89,7 +84,9 @@ public class LightFlickerEffect : MonoBehaviour
             lastSum += newVal;
 
             // Calculate new smoothed average
-            //light.intensity = lastSum / (float)smoothQueue.Count;
+            if(brokenLightEffect)
+                light.GetComponent<Light>().intensity = lastSum / (float)smoothQueue.Count;
+
             material.SetColor("_EmissionColor", emissionColor * lastSum / (float)smoothQueue.Count);
             yield return new WaitForSeconds(flickerSpeed);
         }

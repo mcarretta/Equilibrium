@@ -212,9 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcd4843cb724224e926c77fcf144722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 494023873497726167}
+  light: {fileID: 3161829511557226387}
   minIntensity: 0
   maxIntensity: 0.2
   smoothing: 1
   flickerSpeed: 0.1
-  effectActive: 1
+  brokenLightEffect: 0
