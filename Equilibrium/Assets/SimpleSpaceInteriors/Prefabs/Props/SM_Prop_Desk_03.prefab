@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3394724}
   - component: {fileID: 2304466}
   - component: {fileID: 7119070893612924450}
+  - component: {fileID: 5453673631182068222}
   m_Layer: 0
   m_Name: SM_Prop_Desk_03
   m_TagString: Untagged
@@ -92,3 +93,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.56714, y: 1.551624, z: 2.0946503}
   m_Center: {x: -0.00000023841858, y: 0.775812, z: 0}
+--- !u!208 &5453673631182068222
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182156}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.2840002, y: 0.776, z: 1.047}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.776, z: 0}
+  m_TimeToStationary: 0.5

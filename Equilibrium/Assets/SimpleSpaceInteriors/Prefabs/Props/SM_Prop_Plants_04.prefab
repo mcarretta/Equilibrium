@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3304824}
   - component: {fileID: 2389912}
   - component: {fileID: 1273056904881527614}
+  - component: {fileID: 2113885628734947427}
   m_Layer: 0
   m_Name: SM_Prop_Plants_04
   m_TagString: Untagged
@@ -92,3 +93,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.999998, y: 5, z: 1.6931968}
   m_Center: {x: 2.500001, y: 2.5, z: 1.047977}
+--- !u!208 &2113885628734947427
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106732}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5, y: 2.5, z: 0.84700006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 2.5, y: 2.5, z: 1.0480001}
+  m_TimeToStationary: 0.5

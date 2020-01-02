@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 429414}
   - component: {fileID: 3302158}
   - component: {fileID: 2314184}
+  - component: {fileID: -9175271431380616343}
   m_Layer: 0
   m_Name: SM_Prop_Lockers_05
   m_TagString: Untagged
@@ -78,3 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!208 &-9175271431380616343
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184516}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.822, y: 1.4890001, z: 0.33900002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.411, y: 1.4890001, z: -0.021000002}
+  m_TimeToStationary: 0.5
