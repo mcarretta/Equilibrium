@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 431980}
   - component: {fileID: 3300886}
   - component: {fileID: 2352564}
+  - component: {fileID: -7787105898208703617}
   m_Layer: 0
   m_Name: SM_Prop_AirBalloon_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-7787105898208703617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6850996, y: 11.814463, z: 0.68509865}
+  m_Center: {x: 0, y: 5.9072313, z: -0.0000009536743}

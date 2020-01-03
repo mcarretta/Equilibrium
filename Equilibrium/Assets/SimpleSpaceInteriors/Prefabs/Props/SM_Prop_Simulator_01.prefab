@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 475510}
   - component: {fileID: 3326960}
   - component: {fileID: 2385104}
+  - component: {fileID: 6549089391962033462}
+  - component: {fileID: 7170162028265079887}
   m_Layer: 0
   m_Name: SM_Prop_Simulator_01
   m_TagString: Untagged
@@ -78,3 +80,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6549089391962033462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 8.173505, y: 9.65074, z: 7.933113}
+  m_Center: {x: 0, y: 4.82537, z: -0.80934143}
+--- !u!64 &7170162028265079887
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 15a6e81fcda7fbc4ea6f80358ac987b3, type: 3}

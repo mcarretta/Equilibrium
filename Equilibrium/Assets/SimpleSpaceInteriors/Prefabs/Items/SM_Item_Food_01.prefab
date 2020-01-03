@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 458038}
   - component: {fileID: 3314690}
   - component: {fileID: 2300680}
+  - component: {fileID: -339915458734107883}
   m_Layer: 0
   m_Name: SM_Item_Food_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-339915458734107883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9393711, y: 0.3072356, z: 0.67595005}
+  m_Center: {x: -0.0000009536743, y: 0.000000059604645, z: -0.00000023841858}

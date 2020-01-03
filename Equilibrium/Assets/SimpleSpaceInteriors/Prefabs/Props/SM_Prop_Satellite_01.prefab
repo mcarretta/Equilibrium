@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 435898}
   - component: {fileID: 3312956}
   - component: {fileID: 2368778}
+  - component: {fileID: 4139069590523703521}
+  - component: {fileID: 1511987155685966779}
   m_Layer: 0
   m_Name: SM_Prop_Satellite_01
   m_TagString: Untagged
@@ -78,3 +80,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4139069590523703521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.97, y: 4.7, z: 4.4}
+  m_Center: {x: -0.00000023841858, y: 5.384083, z: -0.00000047683716}
+--- !u!64 &1511987155685966779
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 08268602aebf4a649921c3703044b85e, type: 3}

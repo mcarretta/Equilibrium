@@ -9,23 +9,20 @@ public class LightSource2 : MonoBehaviour
     private Material material; //materiale emissivo
     private Color emissionColor;
     private LightFlickerEffect lfe;
+    private float maxIntensity = 0;
 
     private void Start()
     {
+        //init
         material = GetComponent<Renderer>().material;
         emissionColor = material.GetColor("_EmissionColor");
         lfe = GetComponent<LightFlickerEffect>();
+        maxIntensity = lightPrefab.GetComponent<Light>().intensity;
 
         if (!lit) //se luce è spenta
-        {
-            lfe.enabled = true;
-            lightPrefab.SetActive(false);
-        }
+            TurnOffLight();
         else
-        {
-            lightPrefab.SetActive(true);
-            lfe.enabled = false;
-        }
+            TurnOnLight();
     }
 
     public bool isLit()
@@ -38,10 +35,7 @@ public class LightSource2 : MonoBehaviour
     {
         if (lit)
         {
-            //material.DisableKeyword("_EMISSION");
-            lfe.enabled = true; //attivo il flickering, se nello script del flickering l'effetto è disattivo la luce sarà leggermente accesa 
-            lightPrefab.SetActive(false);
-            lit = false;
+            TurnOffLight();
             return true;
         }
         return false;
@@ -51,13 +45,25 @@ public class LightSource2 : MonoBehaviour
     {
         if (!lit)
         {
-            //material.EnableKeyword("_EMISSION");
-            lfe.enabled = false;
-            material.SetColor("_EmissionColor", emissionColor); //rimetto emissione al massimo
-            lightPrefab.SetActive(true);
-            lit = true;
+            TurnOnLight();
             return true;
         }
         return false;
+    }
+
+    private void TurnOffLight()
+    {
+        foreach (Light l in lightPrefab.GetComponents<Light>())
+            l.intensity = 0;
+        lfe.enabled = true;
+        lit = false;
+    }
+
+    private void TurnOnLight()
+    {
+        lightPrefab.GetComponent<Light>().intensity = maxIntensity;
+        material.SetColor("_EmissionColor", emissionColor); //rimetto emissione al massimo
+        lfe.enabled = false;
+        lit = true;
     }
 }

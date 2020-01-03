@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 483728}
   - component: {fileID: 3327502}
   - component: {fileID: 2304392}
+  - component: {fileID: 7461637496951815517}
+  - component: {fileID: 691828510898286152}
   m_Layer: 0
   m_Name: SM_Prop_Computer_04
   m_TagString: Untagged
@@ -78,3 +80,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7461637496951815517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1807632, y: 1.4102592, z: 0.94114685}
+  m_Center: {x: 0, y: 0.7051296, z: 0}
+--- !u!208 &691828510898286152
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168662}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.59000003, y: 0.70500004, z: 0.47100002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.70500004, z: 0}
+  m_TimeToStationary: 0.5

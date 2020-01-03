@@ -158,11 +158,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 50
-  sightDistance: 30
+  sightDistance: 15
   AISpeed: 0.7
   isSearching: 0
   enableRayCastingVision: 1
-  proximityThreshold: 8
+  proximityThreshold: 10
   player: {fileID: 0}
 --- !u!114 &2232746047379833065
 MonoBehaviour:

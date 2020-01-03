@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 461566}
   - component: {fileID: 3340962}
   - component: {fileID: 2315904}
+  - component: {fileID: -4280039900639043906}
   m_Layer: 0
   m_Name: SM_Prop_Pipe_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-4280039900639043906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 4.999998, y: 1.8743945, z: 4.017912}
+  m_Center: {x: 2.499999, y: 0.93719727, z: -2.008956}

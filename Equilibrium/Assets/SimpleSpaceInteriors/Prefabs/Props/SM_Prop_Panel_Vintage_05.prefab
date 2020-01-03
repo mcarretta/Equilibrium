@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 433770}
   - component: {fileID: 3322090}
   - component: {fileID: 2335450}
+  - component: {fileID: 67053412579789890}
   m_Layer: 0
   m_Name: SM_Prop_Panel_Vintage_05
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &67053412579789890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5164375, y: 0.1511856, z: 0.48996544}
+  m_Center: {x: 0, y: 0.0755928, z: 0}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 472654}
   - component: {fileID: 3321476}
   - component: {fileID: 2307514}
+  - component: {fileID: -4515143834464083969}
+  - component: {fileID: -2790532344527046233}
   m_Layer: 0
   m_Name: SM_Prop_3DPrinter_01
   m_TagString: Untagged
@@ -78,3 +80,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-4515143834464083969
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.505293, y: 1.7500143, z: 1.6805916}
+  m_Center: {x: 0, y: 0.87500715, z: 0}
+--- !u!208 &-2790532344527046233
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129564}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.253, y: 0.87500006, z: 0.84000003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.87500006, z: 0}
+  m_TimeToStationary: 0.5

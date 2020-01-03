@@ -199,12 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcd4843cb724224e926c77fcf144722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 3759281766799179569}
+  light: {fileID: 8263732369011651175}
   minIntensity: 0
   maxIntensity: 0.2
   smoothing: 1
   flickerSpeed: 0.1
-  effectActive: 1
+  brokenLightEffect: 0
 --- !u!65 &7060528942126032683
 BoxCollider:
   m_ObjectHideFlags: 0

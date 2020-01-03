@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 400584}
   - component: {fileID: 3369806}
   - component: {fileID: 2315836}
+  - component: {fileID: 312513175253514619}
+  - component: {fileID: -9200671581728117537}
   m_Layer: 0
   m_Name: SM_Prop_Console_03
   m_TagString: Untagged
@@ -78,3 +80,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &312513175253514619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0893219, z: 1}
+  m_Center: {x: 0.5, y: 0.5446609, z: -0.5}
+--- !u!208 &-9200671581728117537
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157088}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.545, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.5, y: 0.545, z: -0.5}
+  m_TimeToStationary: 0.5

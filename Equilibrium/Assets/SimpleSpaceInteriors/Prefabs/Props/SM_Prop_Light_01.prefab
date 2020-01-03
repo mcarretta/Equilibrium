@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 452092}
   - component: {fileID: 3350246}
   - component: {fileID: 2334366}
+  - component: {fileID: -3010330726157276838}
   m_Layer: 0
   m_Name: SM_Prop_Light_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-3010330726157276838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3605967, y: 5.208973, z: 2.3605957}
+  m_Center: {x: -0.00000047683716, y: -2.604487, z: 0}
