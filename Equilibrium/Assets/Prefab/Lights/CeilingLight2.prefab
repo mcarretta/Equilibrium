@@ -49,7 +49,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: 0
+    m_Resolution: 1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -102,9 +102,9 @@ GameObject:
   - component: {fileID: 6986684952519070602}
   - component: {fileID: 6986684952515639160}
   - component: {fileID: 6986684952516770762}
-  - component: {fileID: 2354410672615169450}
   - component: {fileID: 5099856499473417745}
   - component: {fileID: 999254082473349897}
+  - component: {fileID: 4575827428363299825}
   m_Layer: 10
   m_Name: CeilingLight2
   m_TagString: Untagged
@@ -173,20 +173,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2354410672615169450
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6986684952518782044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: c9a70c1709796f74298fd3adcdab7bb6, type: 3}
 --- !u!114 &5099856499473417745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,3 +205,16 @@ MonoBehaviour:
   smoothing: 1
   flickerSpeed: 0.1
   brokenLightEffect: 0
+--- !u!65 &4575827428363299825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986684952518782044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4960623, y: 0.2, z: 0.84010077}
+  m_Center: {x: 0, y: -0.07030654, z: 0}

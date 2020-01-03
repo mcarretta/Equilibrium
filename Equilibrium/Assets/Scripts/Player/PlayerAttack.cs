@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private int light = 0;
     [SerializeField] private float absorbRange = 5;
+    [SerializeField] private float doorOpenRange = 4;
     [SerializeField] private Camera camera;
     [SerializeField] private GameObject lightBulletPrefab;
     [SerializeField] private GameObject lantern;
@@ -51,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
                 LightSource2 ls = hit.collider.gameObject.GetComponent<LightSource2>();
                 LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
 
-                if(ls) //se è una sorgente di luce
+                if (ls) //se è una sorgente di luce
                 {
                     if (ls.takeLight()) //se è accesa --> prendo luce
                         Light++;
@@ -62,8 +63,14 @@ public class PlayerAttack : MonoBehaviour
                     if (lt) //se è uno switch per le porte lo triggero
                         lt.Trigger();
                 }
-
-            }                    
+            } 
+            
+            if(Physics.Raycast(ray, out hit, doorOpenRange)) //secondo raycast più corto per vedere se posso aprire una porta
+            {
+                UnlockedDoor ud = hit.collider.gameObject.GetComponent<UnlockedDoor>();
+                if (ud)
+                    ud.Open();
+            }
         }
     }
 
