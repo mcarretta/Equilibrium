@@ -7,24 +7,22 @@ public class KillPlayer : MonoBehaviour
 {
     public GameObject ui;
     private static readonly int FadeOut = Animator.StringToHash("FadeOut");
-    private IEnumerator OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-
         {
-            //se è un oggetto sul layer player
-            Animator animator = ui.GetComponent<Animator>();
-            animator.SetTrigger(FadeOut);
-            Destroy(gameObject);
-            yield return new WaitForSeconds(1);
-            LevelsManager.Instance.LoadDeathMenu();
-            
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            StartCoroutine(LoadDeathMenu());
         }
     }
 
-    public void LoadDeathMenu()
+    private IEnumerator LoadDeathMenu()
     {
-        
-
+        //se è un oggetto sul layer player
+        Animator animator = ui.GetComponent<Animator>();
+        animator.SetTrigger(FadeOut);
+        yield return new WaitForSeconds(1);
+        Debug.Log("Il mio culo!");
+        LevelsManager.Instance.LoadDeathMenu();
     }
 }
