@@ -11,7 +11,7 @@ public class KillPlayer : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponentInChildren<Renderer>().enabled = false;
             StartCoroutine(LoadDeathMenu());
         }
     }
