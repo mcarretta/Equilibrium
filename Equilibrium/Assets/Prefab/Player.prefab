@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6365de2021613a40a213acedf11811a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: 10000
+  light: 10
   absorbRange: 8
   camera: {fileID: 2000000}
   lightBulletPrefab: {fileID: 1792537945286162412, guid: 7db3c9ae5a25fc143bf2bbef77365367,
@@ -538,6 +538,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400002}
     m_Modifications:
+    - target: {fileID: 6406328500998920201, guid: 6470ca63b99527043ae19af5a9dbb6f0,
+        type: 3}
+      propertyPath: m_Name
+      value: hand
+      objectReference: {fileID: 0}
     - target: {fileID: 7979393431893355034, guid: 6470ca63b99527043ae19af5a9dbb6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -607,11 +612,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406328500998920201, guid: 6470ca63b99527043ae19af5a9dbb6f0,
-        type: 3}
-      propertyPath: m_Name
-      value: hand
       objectReference: {fileID: 0}
     - target: {fileID: 5188909505944432385, guid: 6470ca63b99527043ae19af5a9dbb6f0,
         type: 3}
