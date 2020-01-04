@@ -35,8 +35,6 @@ public class AICombat : MonoBehaviour
         
         ps = GetComponentInChildren <ParticleSystem>();
         
-        Debug.Log(ps.tag);
-
         var main = ps.main;
         main.duration = spawnEffectTime;
     }

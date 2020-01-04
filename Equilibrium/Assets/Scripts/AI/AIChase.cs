@@ -48,7 +48,6 @@ namespace AI
                         _mNavMeshAgent.speed = AISpeed;
                     }
                     // Stop only if player is far enough
-                    // TODO define stopping distance
                     else if (Vector3.Distance(player.transform.position, transform.position) > stopDistance)
                     {
                         _mNavMeshAgent.speed = 0;
@@ -63,8 +62,9 @@ namespace AI
             // Compute if the player can currently be seen from an AI
         
             // Consider FOV first
-            Vector3 aiForward = transform.forward;
-            Vector3 playerDirection = (playerGameObject.transform.position - transform.position).normalized;
+            var transform1 = transform;
+            Vector3 aiForward = transform1.forward;
+            Vector3 playerDirection = (playerGameObject.transform.position - transform1.position).normalized;
         
             // Debug.DrawRay(transform.position, aiForward, Color.blue);
             // Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
@@ -74,7 +74,7 @@ namespace AI
                 // Debug.Log("In sight!");
             
                 // If the player is in the FOV of the AI, then ray cast to check if he is hidden behind objects
-                Ray forwardRay = new Ray(transform.position, playerDirection);
+                Ray forwardRay = new Ray(transform.TransformPoint(0,0,0.7f), playerDirection);
                 RaycastHit hit;
             
                 // Then, check if the player is hidden by objects

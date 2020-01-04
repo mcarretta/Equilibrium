@@ -22,7 +22,6 @@ public class KillPlayer : MonoBehaviour
         Animator animator = ui.GetComponent<Animator>();
         animator.SetTrigger(FadeOut);
         yield return new WaitForSeconds(1);
-        Debug.Log("Il mio culo!");
         LevelsManager.Instance.LoadDeathMenu();
     }
 }
