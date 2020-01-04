@@ -383,8 +383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6365de2021613a40a213acedf11811a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: 10
+  light: 3
   absorbRange: 8
+  doorOpenRange: 4
   camera: {fileID: 2000000}
   lightBulletPrefab: {fileID: 1792537945286162412, guid: 7db3c9ae5a25fc143bf2bbef77365367,
     type: 3}
@@ -513,7 +514,7 @@ GameObject:
   m_Layer: 8
   m_Name: Firepoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -662,6 +663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.681001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824853681086652041, guid: 6470ca63b99527043ae19af5a9dbb6f0,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6470ca63b99527043ae19af5a9dbb6f0, type: 3}

@@ -27,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
         lightBulletText = lightBulletText.GetComponent<TextMeshProUGUI>();
         lanternRadialBar.GetComponent<RadialProgressBar>().maxTime = lanternCooldownTime * 2;
         if (lightBulletText != null)
-            lightBulletText.text = "LIGHT " + light;
+            lightBulletText.text = "" + light;
     }
 
     void Update()
@@ -55,13 +55,16 @@ public class PlayerAttack : MonoBehaviour
                 if (ls) //se è una sorgente di luce
                 {
                     if (ls.takeLight()) //se è accesa --> prendo luce
+                    {
                         Light++;
+                        if (lt) lt.Trigger();
+                    }
 
                     else if (Light > 0 && ls.PutLight()) // se è spenta e ho munizioni --> rilascio luce
+                    {
                         Light--;
-
-                    if (lt) //se è uno switch per le porte lo triggero
-                        lt.Trigger();
+                        if (lt) lt.Trigger();
+                    }
                 }
             } 
             
@@ -130,7 +133,7 @@ public class PlayerAttack : MonoBehaviour
         {
             light = value;
             if(lightBulletText != null)
-                lightBulletText.text = "LIGHT " + light;
+                lightBulletText.text = "" + light;
         }
     }
 }
