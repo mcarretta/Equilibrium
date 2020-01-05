@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform firepoint;
     [SerializeField] private TextMeshProUGUI lightBulletText;
     [SerializeField] private GameObject lanternRadialBar;
+    [SerializeField] private RadialProgressBar lanternRadialProgressBar;
 
     [SerializeField] private float shootCooldownTime = 2; //tempo di ricarica tra un attacco e l'altro
     private bool shootOnCooldown = false;
@@ -22,12 +23,26 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float lanternCooldownTime = 3; //tempo ricarica lanterna
     private bool lanternOnCooldown = false;
 
+    [SerializeField] public GameObject ui;
+    [SerializeField] private Image crosshairImage;
+    [SerializeField] private Image absorbIndicatorImage;
     void Start()
     {
+        lanternRadialProgressBar = lanternRadialBar.GetComponent<RadialProgressBar>();
         lightBulletText = lightBulletText.GetComponent<TextMeshProUGUI>();
-        lanternRadialBar.GetComponent<RadialProgressBar>().maxTime = lanternCooldownTime * 2;
+        lanternRadialProgressBar.maxTime = lanternCooldownTime * 2;
         if (lightBulletText != null)
             lightBulletText.text = "" + light;
+        
+        // Get the images of the crosshair and the indicator from the UI
+        Image[] images = ui.GetComponentsInChildren<Image>();
+        foreach (var image in images)
+        {
+            if (image.CompareTag("Crosshair"))
+                crosshairImage = image;
+            else if (image.CompareTag("Absorb_indicator"))
+                absorbIndicatorImage = image;
+        }
     }
 
     void Update()
@@ -37,6 +52,24 @@ public class PlayerAttack : MonoBehaviour
         ControlLight();
         ShootLight();
         ToggleLantern();
+        
+        // Raycast and check if we're hitting a light
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, absorbRange))
+        {
+            if (hit.collider.CompareTag("Light"))
+            {
+                // Enable the indicator signaling that there is a light absorbable/placeable
+                absorbIndicatorImage.enabled = true;
+                crosshairImage.enabled = false;
+            }
+            else
+            {
+                absorbIndicatorImage.enabled = false;
+                crosshairImage.enabled = true;
+            }
+        }
     }
 
     //assorbe luce da una sorgente
@@ -48,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, absorbRange))  //raycast dal centro dello schermo fino a distanza absorbRange
             {
-                print("colpito qualcosa");
+                //print("colpito qualcosa");
                 LightSource2 ls = hit.collider.gameObject.GetComponent<LightSource2>();
                 LightTrigger lt = hit.collider.gameObject.GetComponent<LightTrigger>();
 
@@ -116,7 +149,7 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator LanternCooldown()
     {
         lanternOnCooldown = true; // la lanterna entra in cooldown
-        lanternRadialBar.GetComponent<RadialProgressBar>().StartLoading();
+        lanternRadialProgressBar.StartLoading();
         yield return new WaitForSeconds(lanternCooldownTime);
         lantern.SetActive(false); //dopo n secondi si spegne
         yield return new WaitForSeconds(lanternCooldownTime); //sta in cooldown n secondi

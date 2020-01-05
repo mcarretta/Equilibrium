@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7060528942126032683}
   m_Layer: 10
   m_Name: CeilingLight4
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

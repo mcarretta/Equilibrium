@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Explosion
   - Fader
+  - Light
+  - Crosshair
+  - Absorb_indicator
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6368550617067554751}
   m_Layer: 10
   m_Name: CeilingLight1
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

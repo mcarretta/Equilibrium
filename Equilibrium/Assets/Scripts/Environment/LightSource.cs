@@ -9,6 +9,9 @@ public class LightSource : MonoBehaviour
     [SerializeField] private int maxIntensity = 2; //massima intensità raggiungibile
     [SerializeField] private Light lightPrefab; //luce figlia dell'oggetto sorgente di luce
     private Material material; //materiale emissivo
+
+    private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
+
     //costanti usate per calcolare l'emissione del materiale
     private const float off = 0f;
     private const float dim = 0.3f;
@@ -71,6 +74,6 @@ public class LightSource : MonoBehaviour
         else
             emission = bright;
         Color finalColor = baseColor * Mathf.LinearToGammaSpace(emission);
-        material.SetColor("_EmissionColor", finalColor);
+        material.SetColor(EmissionColor, finalColor);
     }
 }
