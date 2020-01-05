@@ -20,6 +20,11 @@ public class DeathMenu : MonoBehaviour
         LevelsManager.Instance.LoadCurrentLevel();
     }
 
+    public void MainMenu()
+    {
+        LevelsManager.Instance.LoadMainMenu();
+    }
+
     public void Quit()
     {
         Application.Quit();
