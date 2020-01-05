@@ -17,7 +17,7 @@ public class LightSource2 : MonoBehaviour
         material = GetComponent<Renderer>().material;
         emissionColor = material.GetColor("_EmissionColor");
         lfe = GetComponent<LightFlickerEffect>();
-        maxIntensity = lightPrefab.GetComponent<Light>().intensity;
+        maxIntensity = lightPrefab.GetComponentInChildren<Light>().intensity;
 
         if (!lit) //se luce è spenta
             TurnOffLight();
@@ -53,7 +53,7 @@ public class LightSource2 : MonoBehaviour
 
     private void TurnOffLight()
     {
-        foreach (Light l in lightPrefab.GetComponents<Light>())
+        foreach (Light l in lightPrefab.GetComponentsInChildren<Light>())
             l.intensity = 0;
         lfe.enabled = true;
         lit = false;
@@ -61,7 +61,8 @@ public class LightSource2 : MonoBehaviour
 
     private void TurnOnLight()
     {
-        lightPrefab.GetComponent<Light>().intensity = maxIntensity;
+        foreach (Light l in lightPrefab.GetComponentsInChildren<Light>())
+            l.intensity = maxIntensity;
         material.SetColor("_EmissionColor", emissionColor); //rimetto emissione al massimo
         lfe.enabled = false;
         lit = true;
