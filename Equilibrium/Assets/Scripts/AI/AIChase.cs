@@ -6,6 +6,8 @@ namespace AI
     public class AIChase : MonoBehaviour
     {
         // Start is called before the first frame update
+
+        [SerializeField] private LayerMask layerMask;
         
         public float stopDistance = 50;
         public float sightDistance = 100f;
@@ -22,6 +24,7 @@ namespace AI
 
         void Start()
         {
+            layerMask = ~layerMask;
             _aiGameObject = gameObject;
             _mNavMeshAgent = _aiGameObject.GetComponent<NavMeshAgent>();
             _playerColliderName = player.GetComponent<Collider>().name;
@@ -66,24 +69,30 @@ namespace AI
             Vector3 aiForward = transform1.forward;
             Vector3 playerDirection = (playerGameObject.transform.position - transform1.position).normalized;
         
-            // Debug.DrawRay(transform.position, aiForward, Color.blue);
-            // Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
+            Debug.DrawRay(transform.position, aiForward, Color.blue);
+            Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
+
+            Ray forwardRay = new Ray(transform.TransformPoint(0,0,0.7f), playerDirection);
+            RaycastHit hit;
         
-            if ((Vector3.Angle(aiForward, playerDirection) < 62f) || (Vector3.Distance(player.transform.position, transform.position) < proximityThreshold) )
+            // If the player is in the FOV of the AI, then ray cast to check if he is hidden behind objects
+            if (Vector3.Angle(aiForward, playerDirection) < 62f)
             {
                 // Debug.Log("In sight!");
-            
-                // If the player is in the FOV of the AI, then ray cast to check if he is hidden behind objects
-                Ray forwardRay = new Ray(transform.TransformPoint(0,0,0.7f), playerDirection);
-                RaycastHit hit;
-            
-                // Then, check if the player is hidden by objects
+                
                 if (Physics.Raycast(forwardRay, out hit, sightDistance) && hit.collider.name == playerCollider)
                 {
                     return true;
                 }
-
-                return false;
+            }
+            
+            else if (Vector3.Distance(player.transform.position, transform.position) < proximityThreshold)
+            {
+                if (Physics.Raycast(forwardRay, out hit, proximityThreshold, layerMask) && hit.collider.name == playerCollider)
+                {
+                    //Debug.Log("Spider-Sense!");
+                    return true;
+                }
             }
         
             return false;
