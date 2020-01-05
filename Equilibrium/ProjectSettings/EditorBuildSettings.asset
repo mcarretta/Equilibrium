@@ -11,25 +11,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/NextLevelTest.unity
     guid: 2024091b5e34f59468112e2cc6be6fef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AI_test.unity
     guid: c1f7330cada49d543b342a0262eddf7b
   - enabled: 0
     path: Assets/Scenes/Prototype.unity
     guid: d7144a390cf581f468109f2459474506
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 6e2b433136b192a4ea0318dea4c09af7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DeathMenu.unity
     guid: 81b0a88efb45c6a4f867b0ac5cfdd8c2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LevelDiego1.unity
     guid: e4df386d3087321428028eeaf82d51a3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LevelDiego2.unity
     guid: 1f974eadcb18b1843871456cb82f52a0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level1Matteo.unity
     guid: 0a7f28340d0be2645b276412b29dd865
   m_configObjects: {}
