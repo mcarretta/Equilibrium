@@ -779,11 +779,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023442284, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
       propertyPath: levels.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2023442284, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
       propertyPath: levels.Array.data[4]
-      value: 
+      value: Level1Matteo
       objectReference: {fileID: 0}
     - target: {fileID: 2023442284, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
       propertyPath: levels.Array.data[5]
@@ -803,6 +803,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023442284, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
       propertyPath: levels.Array.data[2]
+      value: Level1Matteo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023442284, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
+      propertyPath: levels.Array.data[3]
       value: Level1Matteo
       objectReference: {fileID: 0}
     m_RemovedComponents: []

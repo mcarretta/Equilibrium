@@ -398,6 +398,7 @@ MonoBehaviour:
   camera: {fileID: 2000000}
   lightBulletPrefab: {fileID: 1792537945286162412, guid: 7db3c9ae5a25fc143bf2bbef77365367,
     type: 3}
+  lantern: {fileID: 1390055104830058726}
   firepoint: {fileID: 2900604507932753735}
   shootCooldownTime: 2
   lanternCooldownTime: 4
@@ -456,7 +457,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390055104830058726}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
