@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lit: 1
   lightPrefab: {fileID: 5292716243912771543}
+  lightBulletsAmount: 2
 --- !u!114 &5162680982117120124
 MonoBehaviour:
   m_ObjectHideFlags: 0

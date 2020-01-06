@@ -10,6 +10,7 @@ public class LightSource2 : MonoBehaviour
     private Color emissionColor;
     private LightFlickerEffect lfe;
     private float maxIntensity = 0;
+    [SerializeField] private int lightBulletsAmount = 1;
 
     private void Start()
     {
@@ -25,20 +26,25 @@ public class LightSource2 : MonoBehaviour
             TurnOnLight();
     }
 
+    public int getLightBulletsAmount()
+    {
+        return lightBulletsAmount;
+    }
+    
     public bool isLit()
     {
         return lit;
     }
 
 
-    public bool takeLight()
+    public int takeLight()
     {
         if (lit)
         {
             TurnOffLight();
-            return true;
+            return lightBulletsAmount;
         }
-        return false;
+        return 0;
     }
 
     public bool PutLight()
