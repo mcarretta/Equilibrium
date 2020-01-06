@@ -222,6 +222,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 2363469327865539710, guid: 4c8b68feb3c2c1d4bb6a287a3421b516,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363469327865539710, guid: 4c8b68feb3c2c1d4bb6a287a3421b516,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0828
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c8b68feb3c2c1d4bb6a287a3421b516, type: 3}
 --- !u!1 &48777004
@@ -671,8 +681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtField: {fileID: 1330073147}
   panel: {fileID: 920547421}
-  text: When it's dark you can press E to activate the lantern! Check the cooldown
-    in the right corner of the screen
+  text: When it's dark you can press E to activate the lantern!\nCheck the cooldown
+    in the right corner of the screen.
   triggered: 0
 --- !u!65 &173686260
 BoxCollider:
@@ -823,7 +833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtField: {fileID: 1330073147}
   panel: {fileID: 920547421}
-  text: A door! Right click to open it. You can't close doors!
+  text: A door! Right click to open it. \nYou can't close doors!
   triggered: 0
 --- !u!65 &220219657
 BoxCollider:
@@ -2552,6 +2562,7 @@ GameObject:
   - component: {fileID: 920547422}
   - component: {fileID: 920547424}
   - component: {fileID: 920547423}
+  - component: {fileID: 920547425}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2593,7 +2604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6862745}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2616,6 +2627,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920547421}
   m_CullTransparentMesh: 0
+--- !u!114 &920547425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920547421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1001 &920949951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2723,8 +2748,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtField: {fileID: 1330073147}
   panel: {fileID: 920547421}
-  text: A locked door! You can open it by releasing light into the battery near the
-    door
+  text: A locked door!\nYou can open it by releasing light into the batteries near
+    the door.
   triggered: 0
 --- !u!65 &927153436
 BoxCollider:
@@ -6077,9 +6102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtField: {fileID: 1330073147}
   panel: {fileID: 920547421}
-  text: An enemy! Aim to him and left click to shoot light from your hand! Be careful
-    not to waste ammunitions!
-  triggered: 0
+  text: An enemy!\nAim to him and click the mouse left button to shoot light from
+    your hand!\nBe careful not to waste ammunitions!
+  triggered: 1
 --- !u!65 &1750276336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7166,7 +7191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtField: {fileID: 1330073147}
   panel: {fileID: 920547421}
-  text: A light box! You can absorb light from it just like you did from regular lamp
+  text: A light box!\nYou can absorb light from it just like you did from regular
+    lamps.
   triggered: 0
 --- !u!65 &2037411134
 BoxCollider:
@@ -7827,5 +7853,12 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 920547421}
+    - target: {fileID: 1293972189800382700, guid: c76f06eb3897f1f40a1d1cc6b8654ba3,
+        type: 3}
+      propertyPath: text
+      value: 'Welcome to Equilibrium!\nYou have the power to absorb and release light!\nTry
+        yourself: point a light source and click the mouse right button.\nIf the source
+        is ON you will absorb light, if it''s OFF you will release the light back!'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c76f06eb3897f1f40a1d1cc6b8654ba3, type: 3}

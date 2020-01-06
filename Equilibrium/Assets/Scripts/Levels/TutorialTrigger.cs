@@ -30,6 +30,6 @@ public class TutorialTrigger : MonoBehaviour
             return;
         print("triggered");
         panel.SetActive(true);
-        txtField.GetComponent<TextMeshProUGUI>().text = text;
+        txtField.GetComponent<TextMeshProUGUI>().text = text.Replace("\\n", "\n");
     }
 }
