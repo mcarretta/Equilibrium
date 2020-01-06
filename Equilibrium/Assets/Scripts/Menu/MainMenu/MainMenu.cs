@@ -8,4 +8,9 @@ public class MainMenu : MonoBehaviour
     {
         LevelsManager.Instance.LoadFirstLevel();
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

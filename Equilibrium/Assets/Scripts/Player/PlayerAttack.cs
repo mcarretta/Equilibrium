@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform firepoint;
     [SerializeField] private TextMeshProUGUI lightBulletText;
     [SerializeField] private GameObject lanternRadialBar;
-    [SerializeField] private RadialProgressBar lanternRadialProgressBar;
+    private RadialProgressBar lanternRadialProgressBar;
 
     [SerializeField] private float shootCooldownTime = 2; //tempo di ricarica tra un attacco e l'altro
     private bool shootOnCooldown = false;

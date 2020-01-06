@@ -1302,9 +1302,8 @@ GameObject:
   - component: {fileID: 1433338569}
   - component: {fileID: 1433338568}
   - component: {fileID: 1433338567}
-  - component: {fileID: 1433338570}
   m_Layer: 5
-  m_Name: BtnSettings
+  m_Name: BtnQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,7 +1371,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433338568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1904990683}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1433338568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,19 +1419,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433338565}
   m_CullTransparentMesh: 0
---- !u!114 &1433338570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433338565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff59b8017b075548aa344032fc56cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1340255003}
 --- !u!1001 &1446686320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,7 +1928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SETTINGS
+  m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5879e2f329f4e894aa37b864c23ae96b, type: 2}
   m_sharedMaterial: {fileID: 6212417752009522006, guid: 5879e2f329f4e894aa37b864c23ae96b,
@@ -2001,7 +1998,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1928821378}
-    characterCount: 8
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
