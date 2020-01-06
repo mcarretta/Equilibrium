@@ -15,12 +15,13 @@ public class KillPlayer : MonoBehaviour
 
     private void Start()
     {
+        _fadeAudioSource = GetComponentInChildren<FadeAudioSource>();
+
         _animator = ui.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        _fadeAudioSource = other.GetComponentInChildren<FadeAudioSource>();
 
         // Disable the enemy renderer to avoid interference with the death animation
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
