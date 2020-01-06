@@ -7745,7 +7745,12 @@ PrefabInstance:
     - target: {fileID: 1293972189800382707, guid: c76f06eb3897f1f40a1d1cc6b8654ba3,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293972189800382707, guid: c76f06eb3897f1f40a1d1cc6b8654ba3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 1293972189800382702, guid: c76f06eb3897f1f40a1d1cc6b8654ba3,
         type: 3}
