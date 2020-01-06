@@ -5,17 +5,22 @@ namespace AI
 {
    
 
-    public static class FadeAudioSource {
+    public class FadeAudioSource: MonoBehaviour
+    {
 
-        public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private float _duration;
+        [SerializeField] private float _targetVolume;
+
+        public IEnumerator StartFade()
         {
             float currentTime = 0;
-            float start = audioSource.volume;
+            float start = _audioSource.volume;
 
-            while (currentTime < duration)
+            while (currentTime < _duration)
             {
                 currentTime += Time.deltaTime;
-                audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                _audioSource.volume = Mathf.Lerp(start, _targetVolume, currentTime / _duration);
                 yield return null;
             }
             yield break;

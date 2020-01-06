@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using AI;
 using UnityEngine;
 
-using FadeAudioSource;
 
 public class AICombat : MonoBehaviour
 {
@@ -12,11 +11,6 @@ public class AICombat : MonoBehaviour
     private Color _startColor;
     private MeshRenderer _mMeshRenderer;
 
-    public AudioSource audioSource;
-
-    public float duration;
-
-    public float targetVolume;
     // Death animation variables
     
     public float spawnEffectTime = 2;
@@ -29,10 +23,13 @@ public class AICombat : MonoBehaviour
     int m_ShaderProperty;
 
     bool m_deathAnimationOn = false;
+
+    private FadeAudioSource _fadeAudioSource;
     
     // Start is called before the first frame update
     void Start()
     {
+        _fadeAudioSource = GetComponentInChildren<FadeAudioSource>();
         _health = 1f;
         _canFade = false;
         _mMeshRenderer = GetComponent<MeshRenderer>();
@@ -54,7 +51,6 @@ public class AICombat : MonoBehaviour
             if (m_Timer > spawnEffectTime)
             {
                 m_deathAnimationOn = false;
-                StartCoroutine(FadeAudioSource.StartFade(AudioSource audioSource, float duration, float targetVolume));
 
                 AICoordinator.Instance.ProcessDeath(gameObject);
                 Destroy(gameObject);
@@ -72,6 +68,7 @@ public class AICombat : MonoBehaviour
         if (_health <= 0)
         {
             gameObject.GetComponent<AIChase>().AISpeed = 0;
+            StartCoroutine(_fadeAudioSource.StartFade());
             m_deathAnimationOn = true;
             gameObject.GetComponent<BoxCollider>().enabled = false;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
