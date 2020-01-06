@@ -72,13 +72,13 @@ namespace AI
             Debug.DrawRay(transform.position, aiForward, Color.blue);
             Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
 
-            Ray forwardRay = new Ray(transform.TransformPoint(0,0,0.7f), playerDirection);
-            RaycastHit hit;
-        
             // If the player is in the FOV of the AI, then ray cast to check if he is hidden behind objects
             if (Vector3.Angle(aiForward, playerDirection) < 62f)
             {
                 // Debug.Log("In sight!");
+                
+                Ray forwardRay = new Ray(transform.TransformPoint(0,0,0.7f), playerDirection);
+                RaycastHit hit;
                 
                 if (Physics.Raycast(forwardRay, out hit, sightDistance) && hit.collider.name == playerCollider)
                 {
@@ -88,11 +88,23 @@ namespace AI
             
             else if (Vector3.Distance(player.transform.position, transform.position) < proximityThreshold)
             {
-                if (Physics.Raycast(forwardRay, out hit, proximityThreshold, layerMask) && hit.collider.name == playerCollider)
+                
+                Ray forwardRay = new Ray(transform.TransformPoint(0,0,0), playerDirection);
+                RaycastHit hit;
+                
+                Debug.Log("Can be sensed");
+                if (Physics.Raycast(forwardRay, out hit, proximityThreshold, layerMask))
                 {
-                    //Debug.Log("Spider-Sense!");
-                    return true;
-                }
+                    if(hit.collider.name == playerCollider)
+                    {
+                        Debug.Log("Spider-Sense!");
+                        return true;
+                    }
+                    else
+                    {
+                        Debug.Log(hit.collider.name);
+                    }
+                } 
             }
         
             return false;
