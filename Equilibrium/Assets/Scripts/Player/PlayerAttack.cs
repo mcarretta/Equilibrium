@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,11 +12,10 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float doorOpenRange = 4;
     [SerializeField] private Camera camera;
     [SerializeField] private GameObject lightBulletPrefab;
-    [SerializeField] private GameObject lantern;
+    private GameObject _lantern;
     [SerializeField] private Transform firepoint;
-    [SerializeField] private TextMeshProUGUI lightBulletText;
-    [SerializeField] private GameObject lanternRadialBar;
-    [SerializeField] private RadialProgressBar lanternRadialProgressBar;
+    private TextMeshProUGUI _lightBulletText;
+    private RadialProgressBar _lanternRadialProgressBar;
 
     [SerializeField] private float shootCooldownTime = 2; //tempo di ricarica tra un attacco e l'altro
     private bool shootOnCooldown = false;
@@ -23,26 +23,22 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float lanternCooldownTime = 3; //tempo ricarica lanterna
     private bool lanternOnCooldown = false;
 
-    [SerializeField] public GameObject ui;
-    [SerializeField] private Image crosshairImage;
-    [SerializeField] private Image absorbIndicatorImage;
+    [SerializeField] private GameObject ui;
+    private Image _crosshairImage;
+    private Image _absorbIndicatorImage;
     void Start()
     {
-        lanternRadialProgressBar = lanternRadialBar.GetComponent<RadialProgressBar>();
-        lightBulletText = lightBulletText.GetComponent<TextMeshProUGUI>();
-        lanternRadialProgressBar.maxTime = lanternCooldownTime * 2;
-        if (lightBulletText != null)
-            lightBulletText.text = "" + light;
-        
-        // Get the images of the crosshair and the indicator from the UI
-        Image[] images = ui.GetComponentsInChildren<Image>();
-        foreach (var image in images)
-        {
-            if (image.CompareTag("Crosshair"))
-                crosshairImage = image;
-            else if (image.CompareTag("Absorb_indicator"))
-                absorbIndicatorImage = image;
-        }
+        // Locate all the needed components from the UI
+        _lantern = GameObject.FindWithTag("Lantern");
+        _lanternRadialProgressBar = ui.GetComponentInChildren<RadialProgressBar>();
+        _lightBulletText = GameObject.FindWithTag("Light_Bullet_counter").GetComponent<TextMeshProUGUI>();
+
+        _crosshairImage = GameObject.FindWithTag("Crosshair").GetComponent<Image>();
+        _absorbIndicatorImage = GameObject.FindWithTag("Absorb_indicator").GetComponent<Image>();
+
+        _lanternRadialProgressBar.maxTime = lanternCooldownTime * 2;
+        if (_lightBulletText != null)
+            _lightBulletText.text = "" + light;
     }
 
     void Update()
@@ -61,13 +57,13 @@ public class PlayerAttack : MonoBehaviour
             if (hit.collider.CompareTag("Light"))
             {
                 // Enable the indicator signaling that there is a light absorbable/placeable
-                absorbIndicatorImage.enabled = true;
-                crosshairImage.enabled = false;
+                _absorbIndicatorImage.enabled = true;
+                _crosshairImage.enabled = false;
             }
             else
             {
-                absorbIndicatorImage.enabled = false;
-                crosshairImage.enabled = true;
+                _absorbIndicatorImage.enabled = false;
+                _crosshairImage.enabled = true;
             }
         }
     }
@@ -133,7 +129,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetButtonDown("Lantern"))
         {
-            lantern.SetActive(true);
+            _lantern.SetActive(true);
             StartCoroutine(LanternCooldown());
         }
 
@@ -149,9 +145,9 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator LanternCooldown()
     {
         lanternOnCooldown = true; // la lanterna entra in cooldown
-        lanternRadialProgressBar.StartLoading();
+        _lanternRadialProgressBar.StartLoading();
         yield return new WaitForSeconds(lanternCooldownTime);
-        lantern.SetActive(false); //dopo n secondi si spegne
+        _lantern.SetActive(false); //dopo n secondi si spegne
         yield return new WaitForSeconds(lanternCooldownTime); //sta in cooldown n secondi
         lanternOnCooldown = false; //esce dal cooldown
     }
@@ -165,8 +161,8 @@ public class PlayerAttack : MonoBehaviour
         set
         {
             light = value;
-            if(lightBulletText != null)
-                lightBulletText.text = "" + light;
+            if(_lightBulletText != null)
+                _lightBulletText.text = "" + light;
         }
     }
 }

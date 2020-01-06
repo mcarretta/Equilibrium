@@ -10,6 +10,8 @@ TagManager:
   - Light
   - Crosshair
   - Absorb_indicator
+  - Light_Bullet_counter
+  - Lantern
   layers:
   - Default
   - TransparentFX

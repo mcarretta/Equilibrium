@@ -8,11 +8,11 @@ public class KillPlayer : MonoBehaviour
 {
     [SerializeField] public GameObject ui;
     private static readonly int FadeOut = Animator.StringToHash("FadeOut");
-    [SerializeField] private Animator animator;
+    private Animator _animator;
 
     private void Start()
     {
-        animator = ui.GetComponent<Animator>();
+        _animator = ui.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +29,7 @@ public class KillPlayer : MonoBehaviour
     private IEnumerator LoadDeathMenu()
     {
         // Enable the death animation
-        animator.SetTrigger(FadeOut);
+        _animator.SetTrigger(FadeOut);
         yield return new WaitForSeconds(1);
         // After the animation completes show the death menu
         LevelsManager.Instance.LoadDeathMenu();

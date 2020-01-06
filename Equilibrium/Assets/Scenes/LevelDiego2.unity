@@ -410,6 +410,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 37908297}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &47982341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5245463659245140847, guid: 1dd7d8289f20aab429e274c72d368892,
+    type: 3}
+  m_PrefabInstance: {fileID: 1270195992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &50828050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 407958, guid: 9844dc521d67a584ca9bd2214138bc35,
@@ -8508,26 +8520,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3469406376195702373, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8649,6 +8641,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
@@ -9234,6 +9246,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2078621834424028479, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2003100450}
+    - target: {fileID: 2078621834424028479, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: lightBulletText
+      value: 
+      objectReference: {fileID: 47982341}
+    - target: {fileID: 2078621834424028479, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: lantern
+      value: 
+      objectReference: {fileID: 1842627030}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1001 &1387827496
@@ -12214,6 +12241,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 411030, guid: a340dd86644efdf448c1ce2aaf4f575e,
     type: 3}
   m_PrefabInstance: {fileID: 1532771056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1842627030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2862952599614173218, guid: 1dd7d8289f20aab429e274c72d368892,
+    type: 3}
+  m_PrefabInstance: {fileID: 1270195992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1854927949
 PrefabInstance:
