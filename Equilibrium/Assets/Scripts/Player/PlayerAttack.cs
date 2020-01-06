@@ -82,15 +82,17 @@ public class PlayerAttack : MonoBehaviour
 
                 if (ls) //se è una sorgente di luce
                 {
-                    if (ls.takeLight()) //se è accesa --> prendo luce
+                    int light_amount = ls.takeLight();
+                    if (light_amount > 0) //se è accesa --> prendo luce
                     {
-                        Light++;
+                        Light += light_amount;
                         if (lt) lt.Trigger();
                     }
 
-                    else if (Light > 0 && ls.PutLight()) // se è spenta e ho munizioni --> rilascio luce
+                    else if (Light >= ls.getLightBulletsAmount()) // se è spenta e ho munizioni --> rilascio luce
                     {
-                        Light--;
+                        ls.PutLight();
+                        Light -= ls.getLightBulletsAmount();
                         if (lt) lt.Trigger();
                     }
                 }
