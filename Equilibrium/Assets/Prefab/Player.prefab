@@ -393,8 +393,12 @@ MonoBehaviour:
   firepoint: {fileID: 2900604507932753735}
   lightBulletText: {fileID: 0}
   lanternRadialBar: {fileID: 0}
+  lanternRadialProgressBar: {fileID: 0}
   shootCooldownTime: 2
   lanternCooldownTime: 4
+  ui: {fileID: 0}
+  crosshairImage: {fileID: 0}
+  absorbIndicatorImage: {fileID: 0}
 --- !u!81 &8100000
 AudioListener:
   m_ObjectHideFlags: 0
@@ -436,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390055104830058726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.67, z: 0.65}
+  m_LocalPosition: {x: 0, y: -0.050000012, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -451,12 +455,12 @@ Light:
   m_GameObject: {fileID: 1390055104830058726}
   m_Enabled: 1
   serializedVersion: 9
-  m_Type: 2
+  m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
-  m_Range: 20
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 1.2
+  m_Range: 25
+  m_SpotAngle: 45
+  m_InnerSpotAngle: 4
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -485,7 +489,7 @@ Light:
       e33: 1
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
