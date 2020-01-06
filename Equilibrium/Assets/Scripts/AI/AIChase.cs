@@ -69,8 +69,8 @@ namespace AI
             Vector3 aiForward = transform1.forward;
             Vector3 playerDirection = (playerGameObject.transform.position - transform1.position).normalized;
         
-            Debug.DrawRay(transform.position, aiForward, Color.blue);
-            Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
+            //Debug.DrawRay(transform.position, aiForward, Color.blue);
+            //Debug.DrawLine(transform.position, playerGameObject.transform.position, Color.red);
 
             // If the player is in the FOV of the AI, then ray cast to check if he is hidden behind objects
             if (Vector3.Angle(aiForward, playerDirection) < 62f)
@@ -92,17 +92,13 @@ namespace AI
                 Ray forwardRay = new Ray(transform.TransformPoint(0,0,0), playerDirection);
                 RaycastHit hit;
                 
-                Debug.Log("Can be sensed");
+                //Debug.Log("Can be sensed");
                 if (Physics.Raycast(forwardRay, out hit, proximityThreshold, layerMask))
                 {
                     if(hit.collider.name == playerCollider)
                     {
-                        Debug.Log("Spider-Sense!");
+                        //Debug.Log("Spider-Sense!");
                         return true;
-                    }
-                    else
-                    {
-                        Debug.Log(hit.collider.name);
                     }
                 } 
             }

@@ -11,6 +11,8 @@ TagManager:
   - Crosshair
   - Absorb_indicator
   - Light_Bullet_counter
+  - Lantern_cooldown
+  - Player_Lantern
   - Lantern
   layers:
   - Default

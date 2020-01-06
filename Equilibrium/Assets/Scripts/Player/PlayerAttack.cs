@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float doorOpenRange = 4;
     [SerializeField] private Camera camera;
     [SerializeField] private GameObject lightBulletPrefab;
-    private GameObject _lantern;
+    [SerializeField] private GameObject lantern;
     [SerializeField] private Transform firepoint;
     private TextMeshProUGUI _lightBulletText;
     private RadialProgressBar _lanternRadialProgressBar;
@@ -29,7 +29,6 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         // Locate all the needed components from the UI
-        _lantern = GameObject.FindWithTag("Lantern");
         _lanternRadialProgressBar = ui.GetComponentInChildren<RadialProgressBar>();
         _lightBulletText = GameObject.FindWithTag("Light_Bullet_counter").GetComponent<TextMeshProUGUI>();
 
@@ -129,7 +128,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetButtonDown("Lantern"))
         {
-            _lantern.SetActive(true);
+            lantern.SetActive(true);
             StartCoroutine(LanternCooldown());
         }
 
@@ -147,7 +146,7 @@ public class PlayerAttack : MonoBehaviour
         lanternOnCooldown = true; // la lanterna entra in cooldown
         _lanternRadialProgressBar.StartLoading();
         yield return new WaitForSeconds(lanternCooldownTime);
-        _lantern.SetActive(false); //dopo n secondi si spegne
+        lantern.SetActive(false); //dopo n secondi si spegne
         yield return new WaitForSeconds(lanternCooldownTime); //sta in cooldown n secondi
         lanternOnCooldown = false; //esce dal cooldown
     }
