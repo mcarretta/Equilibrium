@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,8 @@ public class KillPlayer : MonoBehaviour
     private static readonly int FadeOut = Animator.StringToHash("FadeOut");
     private Animator _animator;
 
+    private FadeAudioSource _fadeAudioSource;
+
     private void Start()
     {
         _animator = ui.GetComponent<Animator>();
@@ -17,9 +20,13 @@ public class KillPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        _fadeAudioSource = other.GetComponentInChildren<FadeAudioSource>();
+
         // Disable the enemy renderer to avoid interference with the death animation
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            StartCoroutine(_fadeAudioSource.StartFade());
+
             gameObject.GetComponentInChildren<Renderer>().enabled = false;
             StartCoroutine(LoadDeathMenu());
             // TODO stop the player
