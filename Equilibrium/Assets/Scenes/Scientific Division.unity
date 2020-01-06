@@ -1520,7 +1520,7 @@ Transform:
   - {fileID: 1573750824}
   - {fileID: 1694935236}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &159674029
 PrefabInstance:
@@ -1956,6 +1956,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -1965,11 +1970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -2123,6 +2123,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -2132,11 +2137,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -2361,6 +2361,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -2370,11 +2375,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -2522,15 +2522,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: brokenLightEffect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: lit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: brokenLightEffect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -3461,7 +3461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &416344979
 PrefabInstance:
@@ -4902,7 +4902,7 @@ Transform:
   - {fileID: 1527584243}
   - {fileID: 521731972}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &559939400
 PrefabInstance:
@@ -5583,7 +5583,7 @@ Transform:
   - {fileID: 1757921243}
   - {fileID: 2117501514}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &673410451
 PrefabInstance:
@@ -6913,16 +6913,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: brokenLightEffect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: m_Enabled
@@ -6932,6 +6922,16 @@ PrefabInstance:
         type: 3}
       propertyPath: lit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: brokenLightEffect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -7573,6 +7573,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -7582,11 +7587,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -7669,7 +7669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &994352711
 PrefabInstance:
@@ -7883,6 +7883,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1065296507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1085229822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2251849327299627873, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_Name
+      value: NextLevelWarp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251849327299627878, guid: 88c0ac561c275b94a8fdc1daf5bd859e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88c0ac561c275b94a8fdc1daf5bd859e, type: 3}
 --- !u!1001 &1089924124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7950,6 +8019,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -7959,11 +8033,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -8514,7 +8583,7 @@ Transform:
   - {fileID: 1065296508}
   - {fileID: 245094173}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1204945871 stripped
 Transform:
@@ -9038,42 +9107,42 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.lineCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.lineCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6751352019071897148, guid: 1dd7d8289f20aab429e274c72d368892,
+    - target: {fileID: 221975395871276315, guid: 1dd7d8289f20aab429e274c72d368892,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
@@ -10260,6 +10329,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -10269,11 +10343,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -10644,7 +10713,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1559844838
 PrefabInstance:
@@ -11267,15 +11336,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: brokenLightEffect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: lit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: brokenLightEffect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -11647,6 +11716,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: m_Enabled
@@ -11656,11 +11730,6 @@ PrefabInstance:
         type: 3}
       propertyPath: brokenLightEffect
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -11737,6 +11806,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: brokenLightEffect
@@ -11746,11 +11820,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIntensity
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: lit
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
@@ -12328,7 +12397,7 @@ Transform:
   - {fileID: 1499909571}
   - {fileID: 367456642}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1701932261
 PrefabInstance:
@@ -14292,15 +14361,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
-        type: 3}
-      propertyPath: brokenLightEffect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3782863736902996199, guid: 49353c71701e79d41b2f570e19a54de3,
         type: 3}
       propertyPath: lit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072118623664337853, guid: 49353c71701e79d41b2f570e19a54de3,
+        type: 3}
+      propertyPath: brokenLightEffect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353c71701e79d41b2f570e19a54de3, type: 3}
