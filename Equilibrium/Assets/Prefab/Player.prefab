@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
+  - component: {fileID: -2953247267892358496}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -204,7 +205,8 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1822224780896682257, guid: da2a80f1c886d3543b2e2f7749fe1fc3,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -291,6 +293,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!81 &-2953247267892358496
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,11 +553,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400002}
     m_Modifications:
-    - target: {fileID: 6406328500998920201, guid: 6470ca63b99527043ae19af5a9dbb6f0,
-        type: 3}
-      propertyPath: m_Name
-      value: hand
-      objectReference: {fileID: 0}
     - target: {fileID: 7979393431893355034, guid: 6470ca63b99527043ae19af5a9dbb6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,6 +622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406328500998920201, guid: 6470ca63b99527043ae19af5a9dbb6f0,
+        type: 3}
+      propertyPath: m_Name
+      value: hand
       objectReference: {fileID: 0}
     - target: {fileID: 5188909505944432385, guid: 6470ca63b99527043ae19af5a9dbb6f0,
         type: 3}
