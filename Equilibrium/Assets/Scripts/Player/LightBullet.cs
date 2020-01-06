@@ -59,16 +59,21 @@ public class LightBullet : MonoBehaviour
     //il proiettile si distrugge se tocca qualcosa
     private void OnTriggerEnter(Collider other)
     {
-        _isAnimatingExplosion = true;
-        _timer = 0;
-        _bulletLight.enabled = false;
-        _bulletCollider.enabled = false;
-        _bulletMesh.enabled = false;
-        Explosion.Play();
-        
-        if (other.CompareTag("Enemy"))
+        if (!other.CompareTag("Tutorial"))
         {
-            other.GetComponent<AICombat>().hit(_energy);
+            _isAnimatingExplosion = true;
+            _timer = 0;
+            _bulletLight.enabled = false;
+            _bulletCollider.enabled = false;
+            _bulletMesh.enabled = false;
+        
+            Explosion.Play();
+        
+            if (other.CompareTag("Enemy"))
+            {
+                other.GetComponent<AICombat>().hit(_energy);
+            }
         }
+        
     }
 }

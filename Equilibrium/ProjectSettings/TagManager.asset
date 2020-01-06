@@ -14,6 +14,7 @@ TagManager:
   - Lantern_cooldown
   - Player_Lantern
   - Lantern
+  - Tutorial
   layers:
   - Default
   - TransparentFX
