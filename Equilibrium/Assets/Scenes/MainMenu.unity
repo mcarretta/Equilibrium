@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023442284, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
       propertyPath: levels.Array.data[3]
-      value: TODO
+      value: Warehouse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd250438c934b414aa343accf9f0d1ac, type: 3}
