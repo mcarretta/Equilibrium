@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3594726665942223852}
   m_Layer: 0
-  m_Name: Door
+  m_Name: LockedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 3612161385461571444}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4645237964143642074}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 1.01, y: 1.491, z: 0.337}
@@ -192,11 +192,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3594726665942223852}
     m_Modifications:
-    - target: {fileID: 7157504455675318976, guid: be5da281b48f27d4b87571c0331a5cfd,
-        type: 3}
-      propertyPath: m_Name
-      value: ActualDoor
-      objectReference: {fileID: 0}
     - target: {fileID: 7157504455675079706, guid: be5da281b48f27d4b87571c0331a5cfd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -252,6 +247,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7157504455675318976, guid: be5da281b48f27d4b87571c0331a5cfd,
+        type: 3}
+      propertyPath: m_Name
+      value: ActualDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 2104628190838866565, guid: be5da281b48f27d4b87571c0331a5cfd,
         type: 3}
       propertyPath: triggerList.Array.size
@@ -271,6 +271,16 @@ PrefabInstance:
         type: 3}
       propertyPath: triggerList.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406672767546806675, guid: be5da281b48f27d4b87571c0331a5cfd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406672767546806675, guid: be5da281b48f27d4b87571c0331a5cfd,
+        type: 3}
+      propertyPath: m_CarveOnlyStationary
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be5da281b48f27d4b87571c0331a5cfd, type: 3}
