@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 173686261}
   - component: {fileID: 173686260}
   - component: {fileID: 173686259}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: Tutorial trigger6
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 220219658}
   - component: {fileID: 220219657}
   - component: {fileID: 220219656}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: Tutorial trigger3
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
@@ -2702,7 +2702,7 @@ GameObject:
   - component: {fileID: 927153437}
   - component: {fileID: 927153436}
   - component: {fileID: 927153435}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: Tutorial trigger5
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
@@ -6056,7 +6056,7 @@ GameObject:
   - component: {fileID: 1750276337}
   - component: {fileID: 1750276336}
   - component: {fileID: 1750276335}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: Tutorial trigger2
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
@@ -7145,7 +7145,7 @@ GameObject:
   - component: {fileID: 2037411135}
   - component: {fileID: 2037411134}
   - component: {fileID: 2037411133}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: Tutorial trigger4
   m_TagString: Tutorial
   m_Icon: {fileID: 0}
