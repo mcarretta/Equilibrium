@@ -162,7 +162,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   stopDistance: 50
-  sightDistance: 15
+  sightDistance: 30
   AISpeed: 0.7
   isSearching: 0
   enableRayCastingVision: 1
