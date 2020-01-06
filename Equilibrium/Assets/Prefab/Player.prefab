@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6365de2021613a40a213acedf11811a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: 3
+  light: 0
   absorbRange: 8
   doorOpenRange: 4
   camera: {fileID: 2000000}
@@ -400,7 +400,7 @@ MonoBehaviour:
     type: 3}
   lantern: {fileID: 1390055104830058726}
   firepoint: {fileID: 2900604507932753735}
-  shootCooldownTime: 2
+  shootCooldownTime: 1.5
   lanternCooldownTime: 4
   ui: {fileID: 0}
 --- !u!81 &8100000
