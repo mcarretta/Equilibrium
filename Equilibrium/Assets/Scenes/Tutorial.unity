@@ -2749,7 +2749,7 @@ MonoBehaviour:
   txtField: {fileID: 1330073147}
   panel: {fileID: 920547421}
   text: A locked door!\nYou can open it by releasing light into the batteries near
-    the door.
+    the door.\nRight click the mouse while aiming at the batteries!
   triggered: 0
 --- !u!65 &927153436
 BoxCollider:
@@ -4417,7 +4417,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 120
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4446,7 +4446,7 @@ MonoBehaviour:
     spaceCount: 40
     wordCount: 41
     linkCount: 0
-    lineCount: 4
+    lineCount: 9
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
