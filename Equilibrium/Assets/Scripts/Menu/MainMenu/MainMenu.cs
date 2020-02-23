@@ -9,8 +9,18 @@ public class MainMenu : MonoBehaviour
         LevelsManager.Instance.LoadFirstLevel();
     }
 
+    public void LoadCredits()
+    {
+        LevelsManager.Instance.LoadLevelByIndex(5);
+    }
+
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void LoadMainMenu()
+    {
+        LevelsManager.Instance.LoadMainMenu();
     }
 }

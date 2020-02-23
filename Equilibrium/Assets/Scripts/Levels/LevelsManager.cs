@@ -19,8 +19,8 @@ public class LevelsManager : Singleton<LevelsManager>
     //carica un livello dato l'indice nella lista
     public void LoadLevelByIndex(int i)
     {
-        if (index + 1 >= levels.Count || index < 0)
-            print("LoadLevelByIndex: indice inesistente");
+        if (i > levels.Count - 1 || i < 0)
+            print("LoadLevelByIndex: unknow index " + i);
         else
         {
             index = i;
