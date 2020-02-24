@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None; //sblocco il cursore per usare il menu
+        Cursor.visible = true; //lo rendo visibile
+    }
+
     public void NewGame()
     {
         LevelsManager.Instance.LoadFirstLevel();
